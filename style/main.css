@@ -10942,6 +10942,12 @@ footer ul li a:hover {
   transition: all 1s ease-in-out;
 }
 
+@media (max-width: 991.98px) {
+  .navbar-jubeliness .dropdown-menu {
+    width: 150px;
+  }
+}
+
 .navbar-jubeliness .profile-picture {
   max-height: 30px;
 }
@@ -11104,8 +11110,60 @@ footer ul li a:hover {
 }
 
 .checkout-bottom {
+  border-top: 1px solid #f3f3f3;
   color: white;
-  background-color: #1a1a1c;
+  background-color: white;
+}
+
+.page-checkout h6 {
+  font-weight: normal;
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #292929;
+}
+
+.page-checkout .rekening-information .rekening-owner {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+  color: #858585;
+}
+
+.page-checkout .rekening-information .rekening-number {
+  font-weight: normal;
+  line-height: 21px;
+  color: #000000;
+}
+
+@media (max-width: 991.98px) {
+  .page-checkout .rekening-information .rekening-number {
+    font-size: 14px;
+  }
+}
+
+.page-checkout .shipping-details .shipping-name {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #292929;
+}
+
+.page-checkout .shipping-details .shipping-phone {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #292929;
+}
+
+.page-checkout .shipping-details .shipping-address {
+  font-size: 14px;
+}
+
+.page-checkout .grand-total .grand-total-price {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
 }
 
 .component-category {

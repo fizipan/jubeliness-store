@@ -60,6 +60,12 @@
     transition: all 1s ease-in-out;
   }
 
+  @include media-breakpoint-down(md) {
+    .dropdown-menu {
+      width: 150px;
+    }
+  }
+
   .profile-picture {
     max-height: 30px;
   }

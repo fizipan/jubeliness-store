@@ -1,0 +1,57 @@
+.page-checkout {
+  h6 {
+    font-weight: normal;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #292929;
+  }
+
+  .rekening-information {
+    .rekening-owner {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 21px;
+      color: #858585;
+    }
+
+    .rekening-number {
+      font-weight: normal;
+      line-height: 21px;
+      color: #000000;
+
+      @include media-breakpoint-down(md) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .shipping-details {
+    .shipping-name {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: #292929;
+    }
+
+    .shipping-phone {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+
+      color: #292929;
+    }
+
+    .shipping-address {
+      font-size: 14px;
+    }
+  }
+
+  .grand-total {
+    .grand-total-price {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      color: #000000;
+    }
+  }
+}
