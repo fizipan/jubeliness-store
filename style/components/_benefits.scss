@@ -1,0 +1,20 @@
+.benefit-card {
+  border: none;
+  .benefit-thumbnail {
+    width: 50%;
+    height: 150px;
+  }
+
+  .benefit-title {
+    margin-top: 20px;
+    line-height: 38px;
+    font-weight: normal;
+    font-size: 20px;
+    color: #000000;
+  }
+
+  .benefit-subtitle {
+    color: #6c757d;
+    font-size: 16px;
+  }
+}

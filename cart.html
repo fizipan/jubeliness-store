@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Keranjang | Jubeliness</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link href="style/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg bg-transparent navbar-light bg-light navbar-jubeliness fixed-top navbar-fixed-top"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png" width="70" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-2">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Produk</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mx-2" style="width: 70%">
+            <form class="navbar-search d-none d-lg-flex">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Cari barang apa hari ini ?"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text">
+                    <img src="images/icon-search.svg" alt="" />
+                  </span>
+                </div>
+              </div>
+            </form>
+          </ul>
+          <ul class="navbar-nav ml-3 d-none d-lg-flex">
+            <li class="nav-item">
+              <a
+                class="nav-link position-relative hover-cart-dropdown"
+                href="#"
+              >
+                <img src="images/cart-fill.svg" alt="" />
+                <div class="cart-badge position-absolute">7</div>
+              </a>
+            </li>
+            <li class="nav-item ml-3">
+              <a class="nav-link" href="#">
+                <img src="images/notification.svg" alt="" />
+              </a>
+            </li>
+            <li class="nav-item ml-3 dropdown">
+              <a
+                href="#"
+                class="nav-link"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+              >
+                <img
+                  src="/images/user_pc.png"
+                  alt="profile"
+                  class="rounded-circle mr-2 profile-picture"
+                />
+                Hi, Hafizh
+              </a>
+              <div class="dropdown-menu">
+                <a href="/dashboard.html" class="dropdown-item">Purchase</a>
+                <a href="/dashboard-account.html" class="dropdown-item"
+                  >Settings</a
+                >
+                <div class="dropdown-divider"></div>
+                <a href="/" class="dropdown-item">logout</a>
+              </div>
+            </li>
+          </ul>
+
+          <!-- mobile version -->
+          <ul class="navbar-nav d-block d-lg-none">
+            <li class="nav-item">
+              <a class="nav-link position-relative" href="#">
+                Cart
+                <div class="cart-badge position-absolute">7</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Notification </a>
+            </li>
+            <form class="navbar-search w-100 d-flex d-lg-none mb-3">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Cari barang apa hari ini ?"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text">
+                    <img src="images/icon-search.svg" alt="" />
+                  </span>
+                </div>
+              </div>
+            </form>
+            <li class="nav-item">
+              <a class="btn btn-outline-dark btn-block px-4 py-2 mb-2" href="#"
+                >Daftar</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-dark btn-block px-4 py-2" href="#">Masuk</a>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown-cart position-absolute">
+          <a href="cart.php" class="cart-container">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="total-cart mb-2">Total (2)</div>
+                  </div>
+                </div>
+                <a href="" class="cart-product-detail">
+                  <div class="row">
+                    <div class="col-2">
+                      <img
+                        src="/images/product-1.jpg"
+                        class="w-100 h-100"
+                        alt=""
+                      />
+                    </div>
+                    <div class="col-6">
+                      <div class="cart-product-name">Buku Startup $100</div>
+                      <div class="cart-count-product">1 Barang</div>
+                    </div>
+                    <div class="col-4">
+                      <div class="cart-product-price">Rp 100.000</div>
+                    </div>
+                  </div>
+                </a>
+                <a href="" class="cart-product-detail">
+                  <div class="row">
+                    <div class="col-2">
+                      <img
+                        src="/images/product-2.jpg"
+                        class="w-100 h-100"
+                        alt=""
+                      />
+                    </div>
+                    <div class="col-6">
+                      <div class="cart-product-name">Pulpen Pelangi</div>
+                      <div class="cart-count-product">1 Barang</div>
+                    </div>
+                    <div class="col-4">
+                      <div class="cart-product-price">Rp 30.000</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- Akhit Navbar -->
+
+    <!-- Page content -->
+    <div class="page-content page-cart">
+      <section class="breadcrumb-store" id="breadcrumb-store">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Cart
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="store-cart">
+        <div class="container">
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-12 table-responsive">
+              <table class="table table-borderless table-cart w-100">
+                <thead>
+                  <tr>
+                    <th>Image</th>
+                    <th>Name Barang</th>
+                    <th>Harga</th>
+                    <th>Jumlah</th>
+                    <th>Subtotal</th>
+                    <th>Menu</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="width: 20%">
+                      <img
+                        src="/images/product-1.jpg"
+                        alt=""
+                        class="cart-image"
+                      />
+                    </td>
+                    <td style="width: 20%">
+                      <div class="product-title">Buku Startup $100</div>
+                      <div class="product-subtitle">Kategori</div>
+                    </td>
+                    <td style="width: 20%">
+                      <div class="product-title">Rp 100.000</div>
+                      <div class="product-subtitle">IDR</div>
+                    </td>
+                    <td style="width: 20%">
+                      <div class="product-title">1</div>
+                      <div class="product-subtitle">Barang</div>
+                    </td>
+                    <td style="width: 20%">
+                      <div class="product-title">Rp 100.000</div>
+                      <div class="product-subtitle">IDR</div>
+                    </td>
+                    <td>
+                      <a href="" class=""
+                        ><img src="/images/icon-delete.svg" alt=""
+                      /></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 20%">
+                      <img
+                        src="/images/product-2.jpg"
+                        alt=""
+                        class="cart-image"
+                      />
+                    </td>
+                    <td style="width: 20%">
+                      <div class="product-title">Pulpen Pelangi</div>
+                      <div class="product-subtitle">Kategori</div>
+                    </td>
+                    <td style="width: 20%">
+                      <div class="product-title">Rp 30.000</div>
+                      <div class="product-subtitle">IDR</div>
+                    </td>
+                    <td style="width: 20%">
+                      <div class="product-title">2</div>
+                      <div class="product-subtitle">Barang</div>
+                    </td>
+                    <td style="width: 20%">
+                      <div class="product-title">Rp 60.000</div>
+                      <div class="product-subtitle">IDR</div>
+                    </td>
+                    <td>
+                      <a href="" class=""
+                        ><img src="/images/icon-delete.svg" alt=""
+                      /></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 20%">
+                      <img
+                        src="/images/product-3.jpg"
+                        alt=""
+                        class="cart-image"
+                      />
+                    </td>
+                    <td style="width: 20%">
+                      <div class="product-title">Penggaris Unique</div>
+                      <div class="product-subtitle">Kategori</div>
+                    </td>
+                    <td style="width: 20%">
+                      <div class="product-title">Rp 50.000</div>
+                      <div class="product-subtitle">IDR</div>
+                    </td>
+                    <td style="width: 20%">
+                      <div class="product-title">3</div>
+                      <div class="product-subtitle">Barang</div>
+                    </td>
+                    <td style="width: 20%">
+                      <div class="product-title">Rp 150.000</div>
+                      <div class="product-subtitle">IDR</div>
+                    </td>
+                    <td>
+                      <a href="" class=""
+                        ><img src="/images/icon-delete.svg" alt=""
+                      /></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row" data-aos="fade-up" data-aos-delay="150">
+            <div class="col-12">
+              <hr />
+            </div>
+            <div class="col-12">
+              <h2>Shipping Details</h2>
+            </div>
+          </div>
+          <div class="row mb-2" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="addresOne">Address 1</label>
+                <input
+                  type="text"
+                  name="addresOne"
+                  id="addresOne"
+                  class="form-control form-store"
+                  value="Setra Duta Cemara"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="addresTwo">Address 2</label>
+                <input
+                  type="text"
+                  name="addresTwo"
+                  id="addresTwo"
+                  class="form-control form-store"
+                  value="Blok B2 No. 34"
+                />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="province">Province</label>
+                <select name="province" id="province" class="form-control">
+                  <option value="west-java">West Java</option>
+                  <option value="south-java">South Java</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="city">City</label>
+                <select name="city" id="city" class="form-control">
+                  <option value="">Jakarta</option>
+                  <option value="">Bandung</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="postal-code">Postal code</label>
+                <input
+                  type="number"
+                  name="postal-code"
+                  id="postal-code"
+                  class="form-control form-store"
+                  value="123999"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="country">Country</label>
+                <input
+                  type="text"
+                  name="country"
+                  id="country"
+                  class="form-control form-store"
+                  value="Indonesia"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="mobile">Mobile</label>
+                <input
+                  type="tel"
+                  name="mobile"
+                  id="mobile"
+                  class="form-control form-store"
+                  value="+628 2020 11111"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row" data-aos="fade-up" data-aos-delay="150">
+            <div class="col-12">
+              <hr />
+            </div>
+            <div class="col-12">
+              <h2 class="mb-2">Payment Information</h2>
+            </div>
+          </div>
+          <div class="row" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-4 col-md-2">
+              <div class="product-title">Rp. 5.000</div>
+              <div class="product-subtitle mb-3">Ongkir</div>
+            </div>
+            <div class="col-4 col-md-3">
+              <div class="product-title">Gopay</div>
+              <div class="product-subtitle">Pembayaran</div>
+            </div>
+            <div class="col-4 col-md-2">
+              <div class="product-title">Gojek</div>
+              <div class="product-subtitle">Kurir</div>
+            </div>
+            <div class="col-5 col-md-2 mt-2 mt-lg-0">
+              <div class="product-title text-success">Rp. 505.000</div>
+              <div class="product-subtitle">Total</div>
+            </div>
+            <div class="col-8 col-md-3 d-none d-lg-block">
+              <a
+                href="/success.html"
+                class="btn btn-success btn-block px-4 mt-1"
+                >Checkout Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Mobile version -->
+    <div
+      class="checkout-bottom d-flex d-lg-none justify-content-between align-items-center fixed-bottom py-2 px-3"
+    >
+      <div>
+        <div class="text-muted">Total Price</div>
+        <div class="text-success">$392,489</div>
+      </div>
+      <div>
+        <a href="/success.html" class="btn btn-success">Checkout Now</a>
+      </div>
+    </div>
+    <!-- Akhir page contant -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between pb-4">
+          <div class="col-md-3">
+            <img src="/images/logo.png" class="logo-footer" alt="" />
+            <p>Lorem Ipsum Sit amet mamang samlekum</p>
+          </div>
+          <div class="col-md-7">
+            <div class="row">
+              <div class="col-md-4">
+                <h5 class="mt-4 mt-lg-0">Jubeliness</h5>
+                <ul>
+                  <li><a href="">About</a></li>
+                  <li><a href="">Tata Cara Order</a></li>
+                  <li><a href="">Kebijakan Privasi</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <h5 class="mt-4 mt-lg-0">Explore</h5>
+                <ul>
+                  <li><a href="">Donasi Bersama</a></li>
+                  <li><a href="">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <h5 class="mt-4 mt-lg-0">Social Media</h5>
+                <ul>
+                  <li><a href="">Instagram</a></li>
+                  <li><a href="">Facebook</a></li>
+                  <li><a href="">Twitter</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-12">
+            <p class="copyright">
+              &copy; 2020 - 2021 Jubeliness • All rights reserved • Love from
+              Jakarta
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Akhir footer -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/vendor/jquery/jquery.slim.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="/vendor/vue/vue.js"></script>
+    <script src="script/navbar-scroll.js"></script>
+    <script src="script/dropdown.js"></script>
+  </body>
+</html>
