@@ -11391,7 +11391,7 @@ footer ul li a:hover {
 .swiper-container .swiper-wrapper .swiper-slide {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: -webkit-flex;
+  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
