@@ -1,6 +1,6 @@
 var swiper = new Swiper(".swiper-container", {
   slidesPerView: 3,
-  spaceBetween: 30,
+  spaceBetween: 10,
   preloadImages: false,
   lazy: true,
   navigation: {
@@ -19,7 +19,7 @@ var swiper = new Swiper(".swiper-container", {
     },
     768: {
       slidesPerView: 4,
-      spaceBetween: 40,
+      spaceBetween: 30,
     },
     1024: {
       slidesPerView: 6,
