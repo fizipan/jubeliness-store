@@ -10830,13 +10830,19 @@ body {
 
 h5 {
   line-height: 30px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 20px;
   color: #000000;
 }
 
+@media (max-width: 991.98px) {
+  h5 {
+    font-size: 16px;
+  }
+}
+
 .page-content {
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 footer {
@@ -10883,6 +10889,17 @@ footer ul li a:hover {
 @media (max-width: 991.98px) {
   .navbar-jubeliness {
     background-color: white !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-jubeliness .navbar-brand {
+    max-width: 50px;
+    max-height: 50px;
+  }
+  .navbar-jubeliness .navbar-brand img {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -11011,7 +11028,7 @@ footer ul li a:hover {
 
 @media (max-width: 991.98px) {
   .page-home .banner-store .carousel .carousel-inner {
-    height: 150px !important;
+    height: 120px !important;
   }
 }
 
@@ -11027,11 +11044,32 @@ footer ul li a:hover {
 }
 
 .page-home .categories-store {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .page-home .products-store {
   margin-top: 30px;
+}
+
+.page-home .products-store .wrapper-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 991.98px) {
+  .page-home .products-store .wrapper-product {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.page-home .products-store .wrapper-product .text-muted {
+  font-size: 14px;
 }
 
 .page-home .benefit-store {
@@ -11233,6 +11271,13 @@ footer ul li a:hover {
   color: #000000;
 }
 
+@media (max-width: 991.98px) {
+  .component-category .category-name {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
 .component-product {
   display: block;
   margin-bottom: 20px;
@@ -11280,7 +11325,7 @@ footer ul li a:hover {
 
 @media (max-width: 991.98px) {
   .component-product .product-name {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -11293,7 +11338,7 @@ footer ul li a:hover {
 
 @media (max-width: 991.98px) {
   .component-product .product-price {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 

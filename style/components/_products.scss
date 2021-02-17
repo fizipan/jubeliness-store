@@ -38,7 +38,7 @@
     color: #0c0d36;
 
     @include media-breakpoint-down(md) {
-      font-size: 16px;
+      font-size: 14px;
     }
   }
 
@@ -49,7 +49,7 @@
     color: #ff7158;
 
     @include media-breakpoint-down(md) {
-      font-size: 14px;
+      font-size: 15px;
     }
   }
 }
