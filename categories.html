@@ -16,6 +16,18 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/solid.css"
+      integrity="sha384-6qO6EOFIDfvv6uzAzozX/BvMu/qkIIHxWYOVMjpVjX+NtPuNyd3YiOEflKIIV2ka"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/fontawesome.css"
+      integrity="sha384-Hx1dya9ptAdKu2hLNR5C2Cwgm+wCfwD0VMGE6jk5OUxxa9I58YfxOCwEtRog+3wk"
+      crossorigin="anonymous"
+    />
     <link href="style/main.css" rel="stylesheet" />
   </head>
 
@@ -30,156 +42,265 @@
     <!-- Akhir Preloader -->
 
     <!-- Navbar -->
-    <nav
-      class="navbar navbar-expand-lg bg-transparent navbar-light bg-light navbar-jubeliness fixed-top navbar-fixed-top"
-    >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/logo.png" width="70" alt="" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mr-2">
-            <li class="nav-item active">
-              <a class="nav-link" href="categories.html">Produk</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav w-100 mx-2">
-            <form class="navbar-search d-none d-lg-flex">
-              <div class="input-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Cari barang apa hari ini ?"
-                />
-                <div class="input-group-append">
-                  <span class="input-group-text">
-                    <img src="images/icon-search.svg" alt="" />
-                  </span>
+    <div id="navbar">
+      <nav
+        class="navbar navbar-expand-lg bg-white d-none d-lg-block align-items-center navbar-light bg-light navbar-jubeliness fixed-top navbar-fixed-top"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" width="70" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-2">
+              <li class="nav-item active">
+                <a class="nav-link" href="categories.html">Kategori</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav w-100 mx-2 position-relative">
+              <form class="navbar-search d-none d-lg-flex">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Cari barang apa hari ini ?"
+                    v-model="searchBarInput"
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">
+                      <img src="images/icon-search.svg" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </form>
+              <div
+                class="search-bar-result position-absolute"
+                v-if="searchBarInput"
+              >
+                <div class="card">
+                  <div class="card-body overflow-auto">
+                    <div class="result-search d-flex align-items-center">
+                      <div class="search-icon-bar mr-3">
+                        <img src="/images/search-icon.svg" width="20" alt="" />
+                      </div>
+                      <a href="" class="d-block">{{ searchBarInput }}</a>
+                    </div>
+                    <div class="result-search d-flex align-items-center">
+                      <div class="search-icon-bar mr-3">
+                        <img src="/images/search-icon.svg" width="20" alt="" />
+                      </div>
+                      <a href="" class="d-block">{{ searchBarInput }}</a>
+                    </div>
+                    <div class="result-search d-flex align-items-center">
+                      <div class="search-icon-bar mr-3">
+                        <img src="/images/search-icon.svg" width="20" alt="" />
+                      </div>
+                      <a href="" class="d-block">{{ searchBarInput }}</a>
+                    </div>
+                    <div class="result-search d-flex align-items-center">
+                      <div class="search-icon-bar mr-3">
+                        <img src="/images/search-icon.svg" width="20" alt="" />
+                      </div>
+                      <a href="" class="d-block">{{ searchBarInput }}</a>
+                    </div>
+                    <div class="result-search d-flex align-items-center">
+                      <div class="search-icon-bar mr-3">
+                        <img src="/images/search-icon.svg" width="20" alt="" />
+                      </div>
+                      <a href="" class="d-block">{{ searchBarInput }}</a>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </form>
-          </ul>
-          <ul class="navbar-nav ml-3 d-none d-lg-flex">
-            <li class="nav-item">
-              <a
-                class="nav-link position-relative hover-cart-dropdown"
-                href="cart.html"
-              >
-                <img src="images/cart-fill.svg" alt="" />
-                <div class="cart-badge position-absolute">7</div>
-              </a>
-            </li>
-            <li class="nav-item ml-3">
-              <a class="nav-link" href="#">
-                <img src="images/notification.svg" alt="" />
-              </a>
-            </li>
-            <li class="nav-item ml-3">
-              <a class="btn btn-outline-dark px-4 py-2" href="#">Daftar</a>
-            </li>
-            <li class="nav-item ml-3">
-              <a class="btn btn-dark px-4 py-2" href="#">Masuk</a>
-            </li>
-          </ul>
-
-          <!-- mobile version -->
-          <ul class="navbar-nav d-block d-lg-none">
-            <li class="nav-item">
-              <a class="nav-link position-relative" href="#">
-                Cart
-                <div class="cart-badge position-absolute">7</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"> Notification </a>
-            </li>
-            <form class="navbar-search w-100 d-flex d-lg-none mb-3">
-              <div class="input-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Cari barang apa hari ini ?"
-                />
-                <div class="input-group-append">
-                  <span class="input-group-text">
-                    <img src="images/icon-search.svg" alt="" />
-                  </span>
+            </ul>
+            <ul class="navbar-nav ml-3 d-none d-lg-flex">
+              <li class="nav-item">
+                <a
+                  class="nav-link position-relative hover-cart-dropdown"
+                  href="cart.html"
+                >
+                  <img src="images/cart-fill.svg" alt="" />
+                  <div class="cart-badge position-absolute">7</div>
+                </a>
+              </li>
+              <li class="nav-item ml-3">
+                <a class="nav-link" href="#">
+                  <img src="images/notification.svg" alt="" />
+                </a>
+              </li>
+              <li class="nav-item ml-3">
+                <a class="btn btn-outline-dark px-4 py-2" href="#">Daftar</a>
+              </li>
+              <li class="nav-item ml-3">
+                <a class="btn btn-dark px-4 py-2" href="#">Masuk</a>
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown-cart position-absolute">
+            <a href="cart.html" class="cart-container">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="total-cart mb-2">Total (2)</div>
+                    </div>
+                  </div>
+                  <a href="details.html" class="cart-product-detail">
+                    <div class="row">
+                      <div class="col-2">
+                        <img
+                          src="/images/product-1.jpg"
+                          class="w-100 h-100"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col-6">
+                        <div class="cart-product-name">Buku Startup $100</div>
+                        <div class="cart-count-product">1 Barang</div>
+                      </div>
+                      <div class="col-4">
+                        <div class="cart-product-price">Rp 100.000</div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="details.html" class="cart-product-detail">
+                    <div class="row">
+                      <div class="col-2">
+                        <img
+                          src="/images/product-2.jpg"
+                          class="w-100 h-100"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col-6">
+                        <div class="cart-product-name">Pulpen Pelangi</div>
+                        <div class="cart-count-product">1 Barang</div>
+                      </div>
+                      <div class="col-4">
+                        <div class="cart-product-price">Rp 30.000</div>
+                      </div>
+                    </div>
+                  </a>
                 </div>
               </div>
-            </form>
-            <li class="nav-item">
-              <a class="btn btn-outline-dark btn-block px-4 py-2 mb-2" href="#"
-                >Daftar</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-dark btn-block px-4 py-2" href="#">Masuk</a>
-            </li>
-          </ul>
+            </a>
+          </div>
         </div>
-        <div class="dropdown-cart position-absolute">
-          <a href="cart.html" class="cart-container">
-            <div class="card">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="total-cart mb-2">Total (2)</div>
-                  </div>
-                </div>
-                <a href="details.html" class="cart-product-detail">
-                  <div class="row">
-                    <div class="col-2">
-                      <img
-                        src="/images/product-1.jpg"
-                        class="w-100 h-100"
-                        alt=""
-                      />
-                    </div>
-                    <div class="col-6">
-                      <div class="cart-product-name">Buku Startup $100</div>
-                      <div class="cart-count-product">1 Barang</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="cart-product-price">Rp 100.000</div>
-                    </div>
-                  </div>
-                </a>
-                <a href="details.html" class="cart-product-detail">
-                  <div class="row">
-                    <div class="col-2">
-                      <img
-                        src="/images/product-2.jpg"
-                        class="w-100 h-100"
-                        alt=""
-                      />
-                    </div>
-                    <div class="col-6">
-                      <div class="cart-product-name">Pulpen Pelangi</div>
-                      <div class="cart-count-product">1 Barang</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="cart-product-price">Rp 30.000</div>
-                    </div>
-                  </div>
-                </a>
+      </nav>
+
+      <!-- navbar-mobile -->
+      <nav
+        class="navbar-jubeliness-mobile d-flex d-lg-none justify-content-between align-items-center"
+      >
+        <a href="/index.html" class="navbar-brand">
+          <img src="/images/logo.png" alt="" />
+        </a>
+        <div class="navbar-mobile-search position-relative">
+          <form class="navbar-search">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Cari barang apa hari ini ?"
+                v-model="searchBarInput"
+              />
+              <div class="input-group-append">
+                <span class="input-group-text">
+                  <img src="images/icon-search.svg" alt="" />
+                </span>
               </div>
             </div>
-          </a>
+          </form>
+          <div
+            class="search-bar-result position-absolute"
+            v-if="searchBarInput"
+          >
+            <div class="card">
+              <div class="card-body overflow-auto">
+                <div class="result-search d-flex align-items-center">
+                  <div class="search-icon-bar mr-3">
+                    <img src="/images/search-icon.svg" width="20" alt="" />
+                  </div>
+                  <a href="" class="d-block">{{ searchBarInput }}</a>
+                </div>
+                <div class="result-search d-flex align-items-center">
+                  <div class="search-icon-bar mr-3">
+                    <img src="/images/search-icon.svg" width="20" alt="" />
+                  </div>
+                  <a href="" class="d-block">{{ searchBarInput }}</a>
+                </div>
+                <div class="result-search d-flex align-items-center">
+                  <div class="search-icon-bar mr-3">
+                    <img src="/images/search-icon.svg" width="20" alt="" />
+                  </div>
+                  <a href="" class="d-block">{{ searchBarInput }}</a>
+                </div>
+                <div class="result-search d-flex align-items-center">
+                  <div class="search-icon-bar mr-3">
+                    <img src="/images/search-icon.svg" width="20" alt="" />
+                  </div>
+                  <a href="" class="d-block">{{ searchBarInput }}</a>
+                </div>
+                <div class="result-search d-flex align-items-center">
+                  <div class="search-icon-bar mr-3">
+                    <img src="/images/search-icon.svg" width="20" alt="" />
+                  </div>
+                  <a href="" class="d-block">{{ searchBarInput }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </nav>
+    </div>
+    <!-- Akhit Navbar -->
+
+    <!-- bottom-navigasi -->
+    <nav
+      class="navbar-jubeliness-bottom bg-white d-flex d-lg-none fixed-bottom justify-content-around align-items-center text-center"
+    >
+      <div class="nav-home" style="color: orange !important">
+        <div class="thumbnail-icon">
+          <i class="fas fa-home"></i>
+        </div>
+        <h5 style="color: orange">Home</h5>
+      </div>
+      <div class="nav-Apps">
+        <div class="thumbnail-icon">
+          <i class="fas fa-wallet"></i>
+        </div>
+        <h5>Apps</h5>
+      </div>
+      <div class="nav-Kategori">
+        <div class="thumbnail-icon">
+          <i class="fas fa-clipboard-list"></i>
+        </div>
+        <h5>Kategori</h5>
+      </div>
+      <div class="nav-Cart">
+        <div class="thumbnail-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+        <h5>Cart</h5>
+      </div>
+      <div class="nav-Akun">
+        <div class="thumbnail-icon">
+          <i class="fas fa-user-circle"></i>
+        </div>
+        <h5>Akun</h5>
       </div>
     </nav>
-    <!-- Akhit Navbar -->
+    <!-- akhir bottom-navigasi -->
 
     <!-- Page content -->
     <div class="page-content page-home">
@@ -420,6 +541,21 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script src="/vendor/vue/vue.js"></script>
+    <script>
+      var gallery = new Vue({
+        el: "#navbar",
+        mounted() {
+          AOS.init();
+        },
+        data: {
+          searchBarInput: "",
+        },
+        methods: {
+          showSearchBar: function () {},
+        },
+      });
     </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script/navbar-scroll.js"></script>
