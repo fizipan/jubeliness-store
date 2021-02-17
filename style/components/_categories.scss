@@ -1,9 +1,12 @@
 .component-category {
   display: block;
-  margin-bottom: 20px;
 
   &:hover {
     text-decoration: none;
+  }
+
+  img {
+    border-radius: 8px;
   }
 
   .category-name {

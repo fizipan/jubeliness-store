@@ -10820,6 +10820,10 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+:root {
+  --swiper-theme-color: white;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -10977,6 +10981,49 @@ footer ul li a:hover {
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   -webkit-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
+}
+
+.page-home .banner-store .carousel .carousel-indicators {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 991.98px) {
+  .page-home .banner-store .carousel .carousel-indicators {
+    top: 150 !important;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.page-home .banner-store .carousel .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+@media (max-width: 991.98px) {
+  .page-home .banner-store .carousel .carousel-indicators li {
+    width: 7px;
+    height: 7px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .page-home .banner-store .carousel .carousel-inner {
+    height: 150px !important;
+  }
+}
+
+.page-home .banner-store .carousel .carousel-inner .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.page-home .banner-store .carousel .carousel-inner .carousel-item img {
+  background-size: contain;
+  width: 100%;
+  height: 100%;
 }
 
 .page-home .categories-store {
@@ -11168,11 +11215,14 @@ footer ul li a:hover {
 
 .component-category {
   display: block;
-  margin-bottom: 20px;
 }
 
 .component-category:hover {
   text-decoration: none;
+}
+
+.component-category img {
+  border-radius: 8px;
 }
 
 .component-category .category-name {
@@ -11331,6 +11381,36 @@ footer ul li a:hover {
   text-align: center;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .swiper-container .swiper-button-prev::after {
+    content: "";
+    display: none;
+  }
+  .swiper-container .swiper-button-next::after {
+    content: "";
+    display: none;
+  }
 }
 
 .slide-fade-enter-active {
