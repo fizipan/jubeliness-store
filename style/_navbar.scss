@@ -145,9 +145,20 @@
 }
 
 .navbar-jubeliness-bottom {
-  padding: 10px 5px;
-  h5 {
-    font-size: 14px;
+  .nav-list {
+    display: block;
+    color: #acacac;
+    margin: 10px 0;
+    width: 24%;
+
+    i {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 10px;
+      margin: 0;
+    }
   }
 }
 
