@@ -158,6 +158,20 @@
     p {
       font-size: 10px;
       margin: 0;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &.active {
+      .thumbnail-icon {
+        color: orange !important;
+      }
+
+      p {
+        color: orange !important;
+      }
     }
   }
 }

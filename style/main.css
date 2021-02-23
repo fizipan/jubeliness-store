@@ -11040,6 +11040,18 @@ footer ul li a:hover {
   margin: 0;
 }
 
+.navbar-jubeliness-bottom .nav-list p:hover {
+  text-decoration: none;
+}
+
+.navbar-jubeliness-bottom .nav-list.active .thumbnail-icon {
+  color: orange !important;
+}
+
+.navbar-jubeliness-bottom .nav-list.active p {
+  color: orange !important;
+}
+
 .navbar-fixed-top.scrolled {
   background-color: white !important;
   -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
