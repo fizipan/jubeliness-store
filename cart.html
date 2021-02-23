@@ -30,190 +30,270 @@
     <!-- Akhir Preloader -->
 
     <!-- Navbar -->
-    <nav
-      class="navbar navbar-expand-lg bg-transparent navbar-light bg-light navbar-jubeliness fixed-top navbar-fixed-top"
-    >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/logo.png" width="70" alt="" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mr-2">
-            <li class="nav-item active">
-              <a class="nav-link" href="categories.html">Produk</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav mx-2" style="width: 70%">
-            <form class="navbar-search d-none d-lg-flex">
-              <div class="input-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Cari barang apa hari ini ?"
-                />
-                <div class="input-group-append">
-                  <span class="input-group-text">
-                    <img src="images/icon-search.svg" alt="" />
-                  </span>
+    <div id="navbar">
+      <nav
+        class="navbar navbar-expand-lg bg-white d-none d-lg-block align-items-center navbar-light bg-light navbar-jubeliness fixed-top navbar-fixed-top"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" width="70" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-2">
+              <li class="nav-item active">
+                <a class="nav-link" href="categories.html">Kategori</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav w-100 mx-2 position-relative">
+              <form class="navbar-search d-none d-lg-flex">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Cari barang apa hari ini ?"
+                    v-model="searchBarInput"
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">
+                      <img src="images/icon-search.svg" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </form>
+              <div
+                class="search-bar-result position-absolute"
+                v-if="searchBarInput"
+              >
+                <div class="card">
+                  <div class="card-body overflow-auto">
+                    <div class="result-search d-flex align-items-center">
+                      <div class="search-icon-bar mr-3">
+                        <img src="/images/search-icon.svg" width="20" alt="" />
+                      </div>
+                      <a href="" class="d-block">{{ searchBarInput }}</a>
+                    </div>
+                    <div class="result-search d-flex align-items-center">
+                      <div class="search-icon-bar mr-3">
+                        <img src="/images/search-icon.svg" width="20" alt="" />
+                      </div>
+                      <a href="" class="d-block">{{ searchBarInput }}</a>
+                    </div>
+                    <div class="result-search d-flex align-items-center">
+                      <div class="search-icon-bar mr-3">
+                        <img src="/images/search-icon.svg" width="20" alt="" />
+                      </div>
+                      <a href="" class="d-block">{{ searchBarInput }}</a>
+                    </div>
+                    <div class="result-search d-flex align-items-center">
+                      <div class="search-icon-bar mr-3">
+                        <img src="/images/search-icon.svg" width="20" alt="" />
+                      </div>
+                      <a href="" class="d-block">{{ searchBarInput }}</a>
+                    </div>
+                    <div class="result-search d-flex align-items-center">
+                      <div class="search-icon-bar mr-3">
+                        <img src="/images/search-icon.svg" width="20" alt="" />
+                      </div>
+                      <a href="" class="d-block">{{ searchBarInput }}</a>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </form>
-          </ul>
-          <ul class="navbar-nav ml-3 d-none d-lg-flex">
-            <li class="nav-item">
-              <a
-                class="nav-link position-relative hover-cart-dropdown"
-                href="cart.html"
-              >
-                <img src="images/cart-fill.svg" alt="" />
-                <div class="cart-badge position-absolute">7</div>
-              </a>
-            </li>
-            <li class="nav-item ml-3">
-              <a class="nav-link" href="#">
-                <img src="images/notification.svg" alt="" />
-              </a>
-            </li>
-            <li class="nav-item ml-3 dropdown">
-              <a
-                href=""
-                class="nav-link"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-              >
-                <img
-                  src="/images/user_pc.png"
-                  alt="profile"
-                  class="rounded-circle mr-2 profile-picture"
-                />
-                Hi, Hafizh
-              </a>
-              <div class="dropdown-menu">
-                <a href="/dashboard.html" class="dropdown-item">Purchase</a>
-                <a href="/dashboard-account.html" class="dropdown-item"
-                  >Settings</a
+            </ul>
+            <ul class="navbar-nav ml-3 d-none d-lg-flex">
+              <li class="nav-item">
+                <a
+                  class="nav-link position-relative hover-cart-dropdown"
+                  href="cart.html"
                 >
-                <div class="dropdown-divider"></div>
-                <a href="/" class="dropdown-item">logout</a>
-              </div>
-            </li>
-          </ul>
-
-          <!-- mobile version -->
-          <ul class="navbar-nav d-block d-lg-none">
-            <li class="nav-item">
-              <a class="nav-link position-relative" href="cart.html">
-                Cart
-                <div class="cart-badge position-absolute">7</div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"> Notification </a>
-            </li>
-            <form class="navbar-search w-100 d-flex d-lg-none mb-3">
-              <div class="input-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Cari barang apa hari ini ?"
-                />
-                <div class="input-group-append">
-                  <span class="input-group-text">
-                    <img src="images/icon-search.svg" alt="" />
-                  </span>
+                  <img src="images/cart-fill.svg" alt="" />
+                  <div class="cart-badge position-absolute">7</div>
+                </a>
+              </li>
+              <li class="nav-item ml-3">
+                <a class="nav-link" href="#">
+                  <img src="images/notification.svg" alt="" />
+                </a>
+              </li>
+              <li class="nav-item ml-3">
+                <a class="btn btn-outline-dark px-4 py-2" href="#">Daftar</a>
+              </li>
+              <li class="nav-item ml-3">
+                <a class="btn btn-dark px-4 py-2" href="#">Masuk</a>
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown-cart position-absolute">
+            <a href="cart.html" class="cart-container">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="total-cart mb-2">Total (2)</div>
+                    </div>
+                  </div>
+                  <a href="details.html" class="cart-product-detail">
+                    <div class="row">
+                      <div class="col-2">
+                        <img
+                          src="/images/product-1.jpg"
+                          class="w-100 h-100"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col-6">
+                        <div class="cart-product-name">Buku Startup $100</div>
+                        <div class="cart-count-product">1 Barang</div>
+                      </div>
+                      <div class="col-4">
+                        <div class="cart-product-price">Rp 100.000</div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="details.html" class="cart-product-detail">
+                    <div class="row">
+                      <div class="col-2">
+                        <img
+                          src="/images/product-2.jpg"
+                          class="w-100 h-100"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col-6">
+                        <div class="cart-product-name">Pulpen Pelangi</div>
+                        <div class="cart-count-product">1 Barang</div>
+                      </div>
+                      <div class="col-4">
+                        <div class="cart-product-price">Rp 30.000</div>
+                      </div>
+                    </div>
+                  </a>
                 </div>
               </div>
-            </form>
-            <li class="nav-item dropdown">
-              <a
-                href=""
-                class="nav-link"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-              >
-                <img
-                  src="/images/user_pc.png"
-                  alt="profile"
-                  class="rounded-circle mr-2 profile-picture"
-                />
-                Hi, Hafizh
-              </a>
-              <div class="dropdown-menu">
-                <a href="/dashboard.html" class="dropdown-item">Purchase</a>
-                <a href="/dashboard-account.html" class="dropdown-item"
-                  >Settings</a
-                >
-                <div class="dropdown-divider"></div>
-                <a href="/" class="dropdown-item">logout</a>
-              </div>
-            </li>
-          </ul>
+            </a>
+          </div>
         </div>
-        <div class="dropdown-cart position-absolute">
-          <a href="cart.html" class="cart-container">
-            <div class="card">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="total-cart mb-2">Total (2)</div>
-                  </div>
-                </div>
-                <a href="details.html" class="cart-product-detail">
-                  <div class="row">
-                    <div class="col-2">
-                      <img
-                        src="/images/product-1.jpg"
-                        class="w-100 h-100"
-                        alt=""
-                      />
-                    </div>
-                    <div class="col-6">
-                      <div class="cart-product-name">Buku Startup $100</div>
-                      <div class="cart-count-product">1 Barang</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="cart-product-price">Rp 100.000</div>
-                    </div>
-                  </div>
-                </a>
-                <a href="details.html" class="cart-product-detail">
-                  <div class="row">
-                    <div class="col-2">
-                      <img
-                        src="/images/product-2.jpg"
-                        class="w-100 h-100"
-                        alt=""
-                      />
-                    </div>
-                    <div class="col-6">
-                      <div class="cart-product-name">Pulpen Pelangi</div>
-                      <div class="cart-count-product">1 Barang</div>
-                    </div>
-                    <div class="col-4">
-                      <div class="cart-product-price">Rp 30.000</div>
-                    </div>
-                  </div>
-                </a>
+      </nav>
+
+      <!-- navbar-mobile -->
+      <nav
+        class="navbar-jubeliness-mobile d-flex d-lg-none justify-content-between align-items-center"
+      >
+        <a href="/index.html" class="navbar-brand">
+          <img src="/images/logo.png" alt="" />
+        </a>
+        <div class="navbar-mobile-search position-relative">
+          <form class="navbar-search">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Cari barang apa hari ini ?"
+                v-model="searchBarInput"
+              />
+              <div class="input-group-append">
+                <span class="input-group-text">
+                  <img src="images/icon-search.svg" alt="" />
+                </span>
               </div>
             </div>
-          </a>
+          </form>
+          <div
+            class="search-bar-result position-absolute"
+            v-if="searchBarInput"
+          >
+            <div class="card">
+              <div class="card-body overflow-auto">
+                <div class="result-search d-flex align-items-center">
+                  <div class="search-icon-bar mr-3">
+                    <img src="/images/search-icon.svg" width="20" alt="" />
+                  </div>
+                  <a href="" class="d-block">{{ searchBarInput }}</a>
+                </div>
+                <div class="result-search d-flex align-items-center">
+                  <div class="search-icon-bar mr-3">
+                    <img src="/images/search-icon.svg" width="20" alt="" />
+                  </div>
+                  <a href="" class="d-block">{{ searchBarInput }}</a>
+                </div>
+                <div class="result-search d-flex align-items-center">
+                  <div class="search-icon-bar mr-3">
+                    <img src="/images/search-icon.svg" width="20" alt="" />
+                  </div>
+                  <a href="" class="d-block">{{ searchBarInput }}</a>
+                </div>
+                <div class="result-search d-flex align-items-center">
+                  <div class="search-icon-bar mr-3">
+                    <img src="/images/search-icon.svg" width="20" alt="" />
+                  </div>
+                  <a href="" class="d-block">{{ searchBarInput }}</a>
+                </div>
+                <div class="result-search d-flex align-items-center">
+                  <div class="search-icon-bar mr-3">
+                    <img src="/images/search-icon.svg" width="20" alt="" />
+                  </div>
+                  <a href="" class="d-block">{{ searchBarInput }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
     <!-- Akhit Navbar -->
+
+    <!-- bottom-navigasi -->
+    <nav
+      class="navbar-jubeliness-bottom bg-dark d-flex d-lg-none fixed-bottom justify-content-around align-items-center text-center"
+    >
+      <a href="#" class="nav-list nav-home" style="color: orange !important">
+        <div class="thumbnail-icon mb-2">
+          <i class="bi bi-house"></i>
+        </div>
+        <p class="text-muted" style="color: orange !important">Home</p>
+      </div>
+      </a>
+      <a href="#" class="nav-list nav-apps">
+        <div class="thumbnail-icon mb-2">
+          <i class="bi bi-app-indicator"></i>
+        </div>
+        <p class="text-muted">Apps</p>
+      </div>
+      </a>
+      <a href="#" class="nav-list nav-kategori">
+        <div class="thumbnail-icon mb-2">
+          <i class="bi bi-list-ul"></i>
+        </div>
+        <p class="text-muted">Kategori</p>
+      </div>
+      </a>
+      <a href="#" class="nav-list nav-cart">
+        <div class="thumbnail-icon mb-2">
+          <i class="bi bi-cart"></i>
+        </div>
+        <p class="text-muted">Keranjang</p>
+      </div>
+      </a>
+      <a href="#" class="nav-list nav-akun">
+        <div class="thumbnail-icon mb-2">
+          <i class="bi bi-person"></i>
+        </div>
+        <p class="text-muted">Akun</p>
+      </div>
+      </a>
+    </nav>
+    <!-- akhir bottom-navigasi -->
 
     <!-- Page content -->
     <div class="page-content page-cart">
@@ -240,6 +320,7 @@
               <table class="table table-borderless table-cart w-100">
                 <thead>
                   <tr>
+                    <th></th>
                     <th>Image</th>
                     <th>Name Barang</th>
                     <th>Harga</th>
@@ -250,6 +331,14 @@
                 </thead>
                 <tbody>
                   <tr>
+                    <td>
+                      <input
+                        class="form-control m-auto"
+                        style="width: 25px"
+                        type="checkbox"
+                        id="gridCheck"
+                      />
+                    </td>
                     <td style="width: 20%">
                       <img
                         src="/images/product-1.jpg"
@@ -280,6 +369,14 @@
                     </td>
                   </tr>
                   <tr>
+                    <td>
+                      <input
+                        class="form-control m-auto"
+                        style="width: 25px"
+                        type="checkbox"
+                        id="gridCheck"
+                      />
+                    </td>
                     <td style="width: 20%">
                       <img
                         src="/images/product-2.jpg"
@@ -310,6 +407,14 @@
                     </td>
                   </tr>
                   <tr>
+                    <td>
+                      <input
+                        class="form-control m-auto"
+                        style="width: 25px"
+                        type="checkbox"
+                        id="gridCheck"
+                      />
+                    </td>
                     <td style="width: 20%">
                       <img
                         src="/images/product-3.jpg"
@@ -451,7 +556,7 @@
               <div class="product-title text-success">Rp. 505.000</div>
               <div class="product-subtitle">Total</div>
             </div>
-            <div class="col-8 col-md-3 d-none d-lg-block">
+            <div class="col-12 col-md-3 mt-2">
               <a
                 href="checkout.html"
                 class="btn btn-success btn-block px-4 mt-1"
@@ -462,20 +567,6 @@
         </div>
       </section>
     </div>
-
-    <!-- Mobile version -->
-    <div
-      class="checkout-bottom d-flex d-lg-none justify-content-between align-items-center fixed-bottom py-2 px-3"
-    >
-      <div>
-        <div class="text-muted">Total Price</div>
-        <div class="text-success">$392,489</div>
-      </div>
-      <div>
-        <a href="checkout.html" class="btn btn-success">Checkout Now</a>
-      </div>
-    </div>
-    <!-- Akhir page contant -->
 
     <!-- Footer -->
     <footer>
@@ -533,6 +624,17 @@
       AOS.init();
     </script>
     <script src="/vendor/vue/vue.js"></script>
+    <script>
+      var navbar = new Vue({
+        el: "#navbar",
+        mounted() {
+          AOS.init();
+        },
+        data: {
+          searchBarInput: "",
+        },
+      });
+    </script>
     <script src="script/navbar-scroll.js"></script>
     <script src="script/dropdown.js"></script>
     <script src="script/preloader.js"></script>

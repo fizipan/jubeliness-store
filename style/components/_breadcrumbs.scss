@@ -19,4 +19,8 @@
   a {
     color: #979797;
   }
+
+  @include media-breakpoint-down(md) {
+    font-size: 14px;
+  }
 }

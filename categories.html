@@ -275,30 +275,35 @@
         </div>
         <p class="text-muted" style="color: orange !important">Home</p>
       </div>
+      </a>
       <a href="#" class="nav-list nav-apps">
         <div class="thumbnail-icon mb-2">
           <i class="bi bi-app-indicator"></i>
         </div>
         <p class="text-muted">Apps</p>
       </div>
+      </a>
       <a href="#" class="nav-list nav-kategori">
         <div class="thumbnail-icon mb-2">
           <i class="bi bi-list-ul"></i>
         </div>
         <p class="text-muted">Kategori</p>
       </div>
+      </a>
       <a href="#" class="nav-list nav-cart">
         <div class="thumbnail-icon mb-2">
           <i class="bi bi-cart"></i>
         </div>
         <p class="text-muted">Keranjang</p>
       </div>
+      </a>
       <a href="#" class="nav-list nav-akun">
         <div class="thumbnail-icon mb-2">
           <i class="bi bi-person"></i>
         </div>
         <p class="text-muted">Akun</p>
       </div>
+      </a>
     </nav>
     <!-- akhir bottom-navigasi -->
 
@@ -312,64 +317,68 @@
               <h5>Cari Kategori Apa ?</h5>
             </div>
           </div>
-          <div class="swiper-container text-center">
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <a href="categories.html" class="component-category">
-                  <img
-                    src="/images/category-makanan.png"
-                    class="w-100"
-                    alt=""
-                  />
-                  <div class="category-name">Makanan</div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="categories.html" class="component-category">
-                  <img src="/images/category-buku.png" class="w-100" alt="" />
-                  <div class="category-name">Buku</div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="categories.html" class="component-category">
-                  <img
-                    src="/images/category-kecantikan.png"
-                    class="w-100"
-                    alt=""
-                  />
-                  <div class="category-name">Kecantikan</div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="categories.html" class="component-category">
-                  <img src="/images/category-dapur.png" class="w-100" alt="" />
-                  <div class="category-name">Dapur</div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="categories.html" class="component-category">
-                  <img src="/images/category-pesta.png" class="w-100" alt="" />
-                  <div class="category-name">Pesta</div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="categories.html" class="component-category">
-                  <img
-                    src="/images/category-olahraga.png"
-                    class="w-100"
-                    alt=""
-                  />
-                  <div class="category-name">Olahraga</div>
-                </a>
+          <div class="row">
+            <div class="col-12">
+              <div class="swiper-container text-center">
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <a href="categories.html" class="component-category">
+                      <img
+                        src="/images/category-makanan.png"
+                        class="w-100"
+                        alt=""
+                      />
+                      <div class="category-name">Makanan</div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="categories.html" class="component-category">
+                      <img src="/images/category-buku.png" class="w-100" alt="" />
+                      <div class="category-name">Buku</div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="categories.html" class="component-category">
+                      <img
+                        src="/images/category-kecantikan.png"
+                        class="w-100"
+                        alt=""
+                      />
+                      <div class="category-name">Kecantikan</div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="categories.html" class="component-category">
+                      <img src="/images/category-dapur.png" class="w-100" alt="" />
+                      <div class="category-name">Dapur</div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="categories.html" class="component-category">
+                      <img src="/images/category-pesta.png" class="w-100" alt="" />
+                      <div class="category-name">Pesta</div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="categories.html" class="component-category">
+                      <img
+                        src="/images/category-olahraga.png"
+                        class="w-100"
+                        alt=""
+                      />
+                      <div class="category-name">Olahraga</div>
+                    </a>
+                  </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+    
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
               </div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
         </div>
       </section>
@@ -544,7 +553,7 @@
     </script>
     <script src="/vendor/vue/vue.js"></script>
     <script>
-      var gallery = new Vue({
+      var navbar = new Vue({
         el: "#navbar",
         mounted() {
           AOS.init();

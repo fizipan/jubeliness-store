@@ -11,17 +11,21 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
-    /* identical to box height */
-
     color: #0c0d36;
+
+    @include media-breakpoint-down(md) {
+      font-size: 14px;
+    }
   }
 
   .product-subtitle {
     font-weight: normal;
     font-size: 14px;
-    /* identical to box height */
-
     color: #979797;
+
+    @include media-breakpoint-down(md) {
+      font-size: 10px;
+    }
   }
 
   .table-cart {
@@ -35,6 +39,10 @@
 
   .cart-image {
     max-height: 85px;
+
+    @include media-breakpoint-down(md) {
+      max-height: 50px;
+    }
   }
 
   .btn-remove {
