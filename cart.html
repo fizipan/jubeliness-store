@@ -55,7 +55,7 @@
                 <a class="nav-link" href="categories.html">Kategori</a>
               </li>
             </ul>
-            <ul class="navbar-nav w-100 mx-2 position-relative">
+            <ul class="navbar-nav mx-2 position-relative" style="width: 70%;">
               <form class="navbar-search d-none d-lg-flex">
                 <div class="input-group">
                   <input
@@ -121,16 +121,34 @@
                   <div class="cart-badge position-absolute">7</div>
                 </a>
               </li>
-              <li class="nav-item ml-3">
+              <li class="nav-item ml-4 mr-2">
                 <a class="nav-link" href="#">
                   <img src="images/notification.svg" alt="" />
                 </a>
               </li>
-              <li class="nav-item ml-3">
-                <a class="btn btn-outline-dark px-4 py-2" href="#">Daftar</a>
-              </li>
-              <li class="nav-item ml-3">
-                <a class="btn btn-dark px-4 py-2" href="#">Masuk</a>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                >
+                  <img
+                    src="/images/user_pc.png"
+                    alt="profile"
+                    class="rounded-circle mr-2 profile-picture"
+                  />
+                  Hi, Hafizh
+                </a>
+                <div class="dropdown-menu">
+                  <a href="/dashboard.html" class="dropdown-item">Purchase</a>
+                  <a href="/dashboard-account.html" class="dropdown-item"
+                    >Settings</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a href="/" class="dropdown-item">logout</a>
+                </div>
               </li>
             </ul>
           </div>
@@ -279,8 +297,9 @@
       </div>
       </a>
       <a href="cart.html" class="nav-list nav-cart active">
-        <div class="thumbnail-icon mb-2">
+        <div class="thumbnail-icon mb-2 position-relative">
           <i class="bi bi-cart"></i>
+          <div class="cart-badge position-absolute">3</div>
         </div>
         <p class="text-muted">Keranjang</p>
       </div>
@@ -541,25 +560,25 @@
           </div>
           <div class="row" data-aos="fade-up" data-aos-delay="200">
             <div class="col-4 col-md-2">
-              <div class="product-title">Rp. 5.000</div>
-              <div class="product-subtitle mb-3">Ongkir</div>
+              <div class="payment-title">Rp. 5.000</div>
+              <div class="payment-subtitle mb-3">Ongkir</div>
             </div>
             <div class="col-4 col-md-3">
-              <div class="product-title">Gopay</div>
-              <div class="product-subtitle">Pembayaran</div>
+              <div class="payment-title">Gopay</div>
+              <div class="payment-subtitle">Pembayaran</div>
             </div>
             <div class="col-4 col-md-2">
-              <div class="product-title">Gojek</div>
-              <div class="product-subtitle">Kurir</div>
+              <div class="payment-title">Gojek</div>
+              <div class="payment-subtitle">Kurir</div>
             </div>
             <div class="col-5 col-md-2 mt-2 mt-lg-0">
-              <div class="product-title text-success">Rp. 505.000</div>
-              <div class="product-subtitle">Total</div>
+              <div class="payment-title" style="font-weight: 600;">Rp. 505.000</div>
+              <div class="payment-subtitle">Total</div>
             </div>
             <div class="col-12 col-md-3 mt-2">
               <a
                 href="checkout.html"
-                class="btn btn-success btn-block px-4 mt-1"
+                class="btn btn-dark btn-block px-4 mt-1"
                 >Checkout Now</a
               >
             </div>

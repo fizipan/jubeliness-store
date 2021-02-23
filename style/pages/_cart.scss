@@ -14,7 +14,7 @@
     color: #0c0d36;
 
     @include media-breakpoint-down(md) {
-      font-size: 14px;
+      font-size: 16px;
     }
   }
 
@@ -22,10 +22,19 @@
     font-weight: normal;
     font-size: 14px;
     color: #979797;
+  }
 
-    @include media-breakpoint-down(md) {
-      font-size: 10px;
-    }
+  .payment-title {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #0c0d36;
+  }
+
+  .payment-subtitle {
+    font-weight: normal;
+    font-size: 14px;
+    color: #979797;
   }
 
   .table-cart {

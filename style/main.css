@@ -11044,6 +11044,19 @@ footer ul li a:hover {
   text-decoration: none;
 }
 
+.navbar-jubeliness-bottom .nav-list .thumbnail-icon .cart-badge {
+  display: inline-block;
+  min-width: 2em;
+  padding: 0.3em;
+  border-radius: 50%;
+  font-size: 10px;
+  text-align: center;
+  background-color: #4b4bff;
+  color: white;
+  top: 2px;
+  left: 40px;
+}
+
 .navbar-jubeliness-bottom .nav-list.active .thumbnail-icon {
   color: orange !important;
 }
@@ -11228,7 +11241,7 @@ footer ul li a:hover {
 
 @media (max-width: 991.98px) {
   .store-cart .product-title {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -11238,10 +11251,17 @@ footer ul li a:hover {
   color: #979797;
 }
 
-@media (max-width: 991.98px) {
-  .store-cart .product-subtitle {
-    font-size: 10px;
-  }
+.store-cart .payment-title {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  color: #0c0d36;
+}
+
+.store-cart .payment-subtitle {
+  font-weight: normal;
+  font-size: 14px;
+  color: #979797;
 }
 
 .store-cart .table-cart {
@@ -11336,6 +11356,87 @@ footer ul li a:hover {
   font-size: 20px;
   line-height: 24px;
   color: #000000;
+}
+
+@media (max-width: 991.98px) {
+  .page-login .card {
+    border: none;
+  }
+}
+
+.page-login .card h1 {
+  margin-top: 10px;
+  font-size: 28px;
+}
+
+.page-login .card p {
+  color: #b0b0c7;
+  font-size: 14px;
+}
+
+.page-login .card .form-group {
+  position: relative;
+}
+
+.page-login .card .form-group img {
+  position: absolute;
+  padding: 13px 11px;
+  width: 38px;
+}
+
+.page-login .card .form-group::before {
+  position: absolute;
+  content: "";
+  top: 11px;
+  height: calc(100% - 22px);
+  border-right: 1px solid #e6e6e6;
+  left: 41px;
+}
+
+.page-login .card .form-control {
+  padding-left: 53px !important;
+  padding: 20px 0.75rem;
+  font-size: 0.875rem;
+  color: #495057;
+  background-color: #fbfbfb;
+  border: 1px solid #efefef;
+}
+
+.page-login .card .form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #635ea7;
+  outline: 0;
+}
+
+.page-login label {
+  font-size: 14px;
+}
+
+.page-login .forget-password {
+  font-size: 14px;
+  color: #7e7e7e;
+  text-decoration: underline;
+}
+
+.page-login .forget-password:hover {
+  color: black;
+}
+
+.page-login .btn {
+  font-size: 14px;
+}
+
+.page-login .btn-google {
+  background-color: #fbfbfb;
+  color: #a8a8a8;
+  border-color: #efefef;
+}
+
+.page-login .btn-google:hover {
+  color: #212529;
+  background-color: #e2e6ea;
+  border-color: #dae0e5;
 }
 
 .component-category {
