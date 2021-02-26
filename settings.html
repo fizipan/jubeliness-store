@@ -2,32 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Categories | Jubeliness</title>
+    <title>Ubah Profile | Jubeliness</title>
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.2/css/solid.css"
-      integrity="sha384-6qO6EOFIDfvv6uzAzozX/BvMu/qkIIHxWYOVMjpVjX+NtPuNyd3YiOEflKIIV2ka"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.2/css/fontawesome.css"
-      integrity="sha384-Hx1dya9ptAdKu2hLNR5C2Cwgm+wCfwD0VMGE6jk5OUxxa9I58YfxOCwEtRog+3wk"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link href="style/main.css" rel="stylesheet" />
   </head>
 
@@ -67,7 +49,7 @@
                 <a class="nav-link" href="categories.html">Kategori</a>
               </li>
             </ul>
-            <ul class="navbar-nav w-100 mx-2 position-relative">
+            <ul class="navbar-nav mx-2 position-relative" style="width: 70%;">
               <form class="navbar-search d-none d-lg-flex">
                 <div class="input-group">
                   <input
@@ -133,16 +115,34 @@
                   <div class="cart-badge position-absolute">7</div>
                 </a>
               </li>
-              <li class="nav-item ml-3">
+              <li class="nav-item ml-4 mr-2">
                 <a class="nav-link" href="#">
                   <img src="images/notification.svg" alt="" />
                 </a>
               </li>
-              <li class="nav-item ml-3">
-                <a class="btn btn-outline-dark px-4 py-2" href="#">Daftar</a>
-              </li>
-              <li class="nav-item ml-3">
-                <a class="btn btn-dark px-4 py-2" href="#">Masuk</a>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                >
+                  <img
+                    src="/images/user_pc.png"
+                    alt="profile"
+                    class="rounded-circle mr-2 profile-picture"
+                  />
+                  Hi, Hafizh
+                </a>
+                <div class="dropdown-menu">
+                  <a href="/dashboard.html" class="dropdown-item">Purchase</a>
+                  <a href="/dashboard-account.html" class="dropdown-item"
+                    >Settings</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a href="/" class="dropdown-item">logout</a>
+                </div>
               </li>
             </ul>
           </div>
@@ -283,7 +283,7 @@
         <p class="text-muted">Apps</p>
       </div>
       </a>
-      <a href="categories.html" class="nav-list nav-kategori active">
+      <a href="categories.html" class="nav-list nav-kategori">
         <div class="thumbnail-icon mb-2">
           <i class="bi bi-list-ul"></i>
         </div>
@@ -291,210 +291,81 @@
       </div>
       </a>
       <a href="cart.html" class="nav-list nav-cart">
-        <div class="thumbnail-icon mb-2">
+        <div class="thumbnail-icon mb-2 position-relative">
           <i class="bi bi-cart"></i>
+          <div class="cart-badge position-absolute">3</div>
         </div>
         <p class="text-muted">Keranjang</p>
       </div>
       </a>
-      <a href="login.html" class="nav-list nav-akun">
+      <a href="login.html" class="nav-list nav-akun active">
         <div class="thumbnail-icon mb-2">
-          <i class="bi bi-box-arrow-in-right"></i>
+          <i class="bi bi-person"></i>
         </div>
-        <p class="text-muted">Masuk</p>
+        <p class="text-muted">Akun</p>
       </div>
       </a>
     </nav>
     <!-- akhir bottom-navigasi -->
 
     <!-- Page content -->
-    <div class="page-content page-home">
-      <!-- Kategori -->
-      <section class="categories-store" id="categories-store">
+    <div class="page-content page-settings">
+      <section class="settings" id="settings">
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <h5>Cari Kategori Apa ?</h5>
+              <h2>Edit Profile</h2>
+              <p class="text-muted">Mari Lengkapi Data mu Disini</p>
             </div>
           </div>
           <div class="row">
             <div class="col-12">
-              <div class="swiper-container text-center">
-                <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide">
-                    <a href="categories.html" class="component-category">
-                      <img
-                        src="/images/category-makanan.png"
-                        class="w-100"
-                        alt=""
-                      />
-                      <div class="category-name">Makanan</div>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="categories.html" class="component-category">
-                      <img src="/images/category-buku.png" class="w-100" alt="" />
-                      <div class="category-name">Buku</div>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="categories.html" class="component-category">
-                      <img
-                        src="/images/category-kecantikan.png"
-                        class="w-100"
-                        alt=""
-                      />
-                      <div class="category-name">Kecantikan</div>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="categories.html" class="component-category">
-                      <img src="/images/category-dapur.png" class="w-100" alt="" />
-                      <div class="category-name">Dapur</div>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="categories.html" class="component-category">
-                      <img src="/images/category-pesta.png" class="w-100" alt="" />
-                      <div class="category-name">Pesta</div>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="categories.html" class="component-category">
-                      <img
-                        src="/images/category-olahraga.png"
-                        class="w-100"
-                        alt=""
-                      />
-                      <div class="category-name">Olahraga</div>
-                    </a>
+              <div class="card shadow-sm border-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img src="/images/photo-profile.jpg" class="img-thumbnail w-100" alt="" />
+                      <input type="file" name="file" id="file" style="display: none" multiple />
+                      <button type="button" name="save" class="btn btn-dark btn-block py-2 mt-2" onclick="thisFileUpload()">Ubah Photo</button>
+                    </div>
+                    <div class="col-md-8 mt-4 mt-lg-0">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="name">Username</label>
+                            <input type="text" name="name" id="name" style="background-color: #f5f7fa" class="form-control" />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" id="email" style="background-color: #f5f7fa" class="form-control" />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="phone">Mobile Phone</label>
+                            <input type="tel" name="phone" id="phone" style="background-color: #f5f7fa" class="form-control" />
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-3 mb-lg-0">
+                          <label>Password</label>
+                          <button type="button" data-toggle="modal" data-target="#changePassword" class="btn btn-dark btn-block">Ubah Password</button>
+                        </div>
+                        <div class="col-12">
+                          <label for="address">Address</label>
+                          <textarea name="address" id="address"></textarea>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-    
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- Akhir kategori -->
-
-      <!-- Produk -->
-      <section class="products-store" id="products-store">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 d-flex align-items-center">
-              <h5>Kategori Makanan</h5>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6 col-lg-3">
-              <a href="details.html" class="component-product">
-                <div class="product-thumbnail">
-                  <div
-                    class="product-image"
-                    style="background-image: url('images/product-1.jpg')"
-                  ></div>
-                </div>
-                <div class="product-name">Buku Startup $100</div>
-                <div class="product-price">Rp 100.000</div>
-              </a>
-            </div>
-            <div class="col-6 col-lg-3">
-              <a href="details.html" class="component-product">
-                <div class="product-thumbnail">
-                  <div
-                    class="product-image"
-                    style="background-image: url('images/product-2.jpg')"
-                  ></div>
-                </div>
-                <div class="product-name">Pulpen Pelangi</div>
-                <div class="product-price">Rp 30.000</div>
-              </a>
-            </div>
-            <div class="col-6 col-lg-3">
-              <a href="details.html" class="component-product">
-                <div class="product-thumbnail">
-                  <div
-                    class="product-image"
-                    style="background-image: url('images/product-3.jpg')"
-                  ></div>
-                </div>
-                <div class="product-name">Penggaris Unique</div>
-                <div class="product-price">Rp 60.000</div>
-              </a>
-            </div>
-            <div class="col-6 col-lg-3">
-              <a href="details.html" class="component-product">
-                <div class="product-thumbnail">
-                  <div
-                    class="product-image"
-                    style="background-image: url('images/product-4.jpg')"
-                  ></div>
-                </div>
-                <div class="product-name">Bubuk Maketti</div>
-                <div class="product-price">Rp 80.000</div>
-              </a>
-            </div>
-            <div class="col-6 col-lg-3">
-              <a href="details.html" class="component-product">
-                <div class="product-thumbnail">
-                  <div
-                    class="product-image"
-                    style="background-image: url('images/product-5.jpg')"
-                  ></div>
-                </div>
-                <div class="product-name">Tatakan Gelas</div>
-                <div class="product-price">Rp 50.000</div>
-              </a>
-            </div>
-            <div class="col-6 col-lg-3">
-              <a href="details.html" class="component-product">
-                <div class="product-thumbnail">
-                  <div
-                    class="product-image"
-                    style="background-image: url('images/product-6.jpg')"
-                  ></div>
-                </div>
-                <div class="product-name">Stabilo Transparan</div>
-                <div class="product-price">Rp 200.000</div>
-              </a>
-            </div>
-            <div class="col-6 col-lg-3">
-              <a href="details.html" class="component-product">
-                <div class="product-thumbnail">
-                  <div
-                    class="product-image"
-                    style="background-image: url('images/product-7.jpg')"
-                  ></div>
-                </div>
-                <div class="product-name">Kopi Cinta</div>
-                <div class="product-price">Rp 120.000</div>
-              </a>
-            </div>
-            <div class="col-6 col-lg-3">
-              <a href="details.html" class="component-product">
-                <div class="product-thumbnail">
-                  <div
-                    class="product-image"
-                    style="background-image: url('images/product-8.jpg')"
-                  ></div>
-                </div>
-                <div class="product-name">Monkey Toys</div>
-                <div class="product-price">Rp 300.000</div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Akhir Produk -->
     </div>
-    <!-- Akhir page contant -->
 
     <!-- Footer -->
     <footer>
@@ -534,15 +405,43 @@
         </div>
         <div class="row text-center">
           <div class="col-12">
-            <p class="copyright">
-              &copy; 2020 - 2021 Jubeliness • All rights reserved • Love from
-              Jakarta
-            </p>
+            <p class="copyright">&copy; 2020 - 2021 Jubeliness • All rights reserved • Love from Jakarta</p>
           </div>
         </div>
       </div>
     </footer>
     <!-- Akhir footer -->
+
+    <div class="modal fade" id="changePassword" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ubah Password</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="currentPassword">Password Sekarang</label>
+              <input type="password" name="currentPassword" class="form-control" style="background-color: #f5f7fa" id="currentPassword" />
+            </div>
+            <div class="form-group">
+              <label for="newPassword">Password Baru</label>
+              <input type="password" name="newPassword" class="form-control" style="background-color: #f5f7fa" id="newPassword" />
+            </div>
+            <div class="form-group">
+              <label for="confirmNewPassword">Konfirmasi Password Baru</label>
+              <input type="password" name="confirmNewPassword" class="form-control" style="background-color: #f5f7fa" id="confirmNewPassword" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-dark">Ubah Password</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="/vendor/jquery/jquery.min.js"></script>
@@ -554,22 +453,29 @@
     <script src="/vendor/vue/vue.js"></script>
     <script>
       var navbar = new Vue({
-        el: "#navbar",
+        el: '#navbar',
         mounted() {
           AOS.init();
         },
         data: {
-          searchBarInput: "",
+          searchBarInput: '',
         },
         methods: {
           showSearchBar: function () {},
         },
       });
     </script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+    <script>
+      CKEDITOR.replace('address');
+    </script>
+    <script>
+      function thisFileUpload() {
+        document.getElementById('file').click();
+      }
+    </script>
     <script src="script/navbar-scroll.js"></script>
     <script src="script/dropdown.js"></script>
-    <script src="script/swiper.js"></script>
     <script src="script/preloader.js"></script>
   </body>
 </html>
