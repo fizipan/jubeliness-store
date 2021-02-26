@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Daftar Transaksi Pembelian | Jubeliness</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="style/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="loading">
+        <img src="images/loading.gif" width="80" alt="" />
+        <p class="text-muted">Sedang Memuat</p>
+      </div>
+    </div>
+    <!-- Akhir Preloader -->
+
+    <!-- Navbar -->
+    <div id="navbar">
+      <nav
+        class="navbar navbar-expand-lg bg-white d-none d-lg-block align-items-center navbar-light bg-light navbar-jubeliness fixed-top navbar-fixed-top"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" width="70" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-2">
+              <li class="nav-item active">
+                <a class="nav-link" href="categories.html">Kategori</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav mx-2 position-relative" style="width: 70%;">
+              <form class="navbar-search d-none d-lg-flex">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Cari barang apa hari ini ?"
+                    v-model="searchBarInput"
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text">
+                      <img src="images/icon-search.svg" alt="" />
+                    </span>
+                  </div>
+                </div>
+              </form>
+              <div
+                class="search-bar-result position-absolute"
+                v-if="searchBarInput"
+              >
+                <div class="card">
+                  <div class="card-body overflow-auto">
+                    <div class="result-search d-flex align-items-center">
+                      <div class="search-icon-bar mr-3">
+                        <img src="/images/search-icon.svg" width="20" alt="" />
+                      </div>
+                      <a href="" class="d-block">{{ searchBarInput }}</a>
+                    </div>
+                    <div class="result-search d-flex align-items-center">
+                      <div class="search-icon-bar mr-3">
+                        <img src="/images/search-icon.svg" width="20" alt="" />
+                      </div>
+                      <a href="" class="d-block">{{ searchBarInput }}</a>
+                    </div>
+                    <div class="result-search d-flex align-items-center">
+                      <div class="search-icon-bar mr-3">
+                        <img src="/images/search-icon.svg" width="20" alt="" />
+                      </div>
+                      <a href="" class="d-block">{{ searchBarInput }}</a>
+                    </div>
+                    <div class="result-search d-flex align-items-center">
+                      <div class="search-icon-bar mr-3">
+                        <img src="/images/search-icon.svg" width="20" alt="" />
+                      </div>
+                      <a href="" class="d-block">{{ searchBarInput }}</a>
+                    </div>
+                    <div class="result-search d-flex align-items-center">
+                      <div class="search-icon-bar mr-3">
+                        <img src="/images/search-icon.svg" width="20" alt="" />
+                      </div>
+                      <a href="" class="d-block">{{ searchBarInput }}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+            <ul class="navbar-nav ml-3 d-none d-lg-flex">
+              <li class="nav-item">
+                <a
+                  class="nav-link position-relative hover-cart-dropdown"
+                  href="cart.html"
+                >
+                  <img src="images/cart-fill.svg" alt="" />
+                  <div class="cart-badge position-absolute">7</div>
+                </a>
+              </li>
+              <li class="nav-item ml-4 mr-2">
+                <a class="nav-link" href="#">
+                  <img src="images/notification.svg" alt="" />
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                >
+                  <img
+                    src="/images/user_pc.png"
+                    alt="profile"
+                    class="rounded-circle mr-2 profile-picture"
+                  />
+                  Hi, Hafizh
+                </a>
+                <div class="dropdown-menu">
+                  <a href="/dashboard.html" class="dropdown-item">Purchase</a>
+                  <a href="/dashboard-account.html" class="dropdown-item"
+                    >Settings</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a href="/" class="dropdown-item">logout</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown-cart position-absolute">
+            <a href="cart.html" class="cart-container">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="total-cart mb-2">Total (2)</div>
+                    </div>
+                  </div>
+                  <a href="details.html" class="cart-product-detail">
+                    <div class="row">
+                      <div class="col-2">
+                        <img
+                          src="/images/product-1.jpg"
+                          class="w-100 h-100"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col-6">
+                        <div class="cart-product-name">Buku Startup $100</div>
+                        <div class="cart-count-product">1 Barang</div>
+                      </div>
+                      <div class="col-4">
+                        <div class="cart-product-price">Rp 100.000</div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="details.html" class="cart-product-detail">
+                    <div class="row">
+                      <div class="col-2">
+                        <img
+                          src="/images/product-2.jpg"
+                          class="w-100 h-100"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col-6">
+                        <div class="cart-product-name">Pulpen Pelangi</div>
+                        <div class="cart-count-product">1 Barang</div>
+                      </div>
+                      <div class="col-4">
+                        <div class="cart-product-price">Rp 30.000</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- navbar-mobile -->
+      <nav
+        class="navbar-jubeliness-mobile d-flex d-lg-none justify-content-between align-items-center"
+      >
+        <a href="/index.html" class="navbar-brand">
+          <img src="/images/logo.png" alt="" />
+        </a>
+        <div class="navbar-mobile-search position-relative">
+          <form class="navbar-search">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Cari barang apa hari ini ?"
+                v-model="searchBarInput"
+              />
+              <div class="input-group-append">
+                <span class="input-group-text">
+                  <img src="images/icon-search.svg" alt="" />
+                </span>
+              </div>
+            </div>
+          </form>
+          <div
+            class="search-bar-result position-absolute"
+            v-if="searchBarInput"
+          >
+            <div class="card">
+              <div class="card-body overflow-auto">
+                <div class="result-search d-flex align-items-center">
+                  <div class="search-icon-bar mr-3">
+                    <img src="/images/search-icon.svg" width="20" alt="" />
+                  </div>
+                  <a href="" class="d-block">{{ searchBarInput }}</a>
+                </div>
+                <div class="result-search d-flex align-items-center">
+                  <div class="search-icon-bar mr-3">
+                    <img src="/images/search-icon.svg" width="20" alt="" />
+                  </div>
+                  <a href="" class="d-block">{{ searchBarInput }}</a>
+                </div>
+                <div class="result-search d-flex align-items-center">
+                  <div class="search-icon-bar mr-3">
+                    <img src="/images/search-icon.svg" width="20" alt="" />
+                  </div>
+                  <a href="" class="d-block">{{ searchBarInput }}</a>
+                </div>
+                <div class="result-search d-flex align-items-center">
+                  <div class="search-icon-bar mr-3">
+                    <img src="/images/search-icon.svg" width="20" alt="" />
+                  </div>
+                  <a href="" class="d-block">{{ searchBarInput }}</a>
+                </div>
+                <div class="result-search d-flex align-items-center">
+                  <div class="search-icon-bar mr-3">
+                    <img src="/images/search-icon.svg" width="20" alt="" />
+                  </div>
+                  <a href="" class="d-block">{{ searchBarInput }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- Akhit Navbar -->
+
+    <!-- bottom-navigasi -->
+    <nav
+      class="navbar-jubeliness-bottom bg-dark d-flex d-lg-none fixed-bottom justify-content-around align-items-center text-center"
+    >
+      <a href="index.html" class="nav-list nav-home">
+        <div class="thumbnail-icon mb-2">
+          <i class="bi bi-house"></i>
+        </div>
+        <p class="text-muted">Home</p>
+      </div>
+      </a>
+      <a href="#" class="nav-list nav-apps">
+        <div class="thumbnail-icon mb-2">
+          <i class="bi bi-app-indicator"></i>
+        </div>
+        <p class="text-muted">Apps</p>
+      </div>
+      </a>
+      <a href="categories.html" class="nav-list nav-kategori">
+        <div class="thumbnail-icon mb-2">
+          <i class="bi bi-list-ul"></i>
+        </div>
+        <p class="text-muted">Kategori</p>
+      </div>
+      </a>
+      <a href="cart.html" class="nav-list nav-cart">
+        <div class="thumbnail-icon mb-2 position-relative">
+          <i class="bi bi-cart"></i>
+          <div class="cart-badge position-absolute">3</div>
+        </div>
+        <p class="text-muted">Keranjang</p>
+      </div>
+      </a>
+      <a href="login.html" class="nav-list nav-akun active">
+        <div class="thumbnail-icon mb-2">
+          <i class="bi bi-person"></i>
+        </div>
+        <p class="text-muted">Akun</p>
+      </div>
+      </a>
+    </nav>
+    <!-- akhir bottom-navigasi -->
+
+    <!-- Page content -->
+    <div class="page-content page-orders">
+      <section class="order-list" id="order-list">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2>Daftar Belanja</h2>
+              <p class="text-muted">Belanja Terus sampai Puas</p>
+            </div>
+            <div class="col-md-4">
+              <form action="" method="GET">
+                <div class="form-group">
+                  <label for="filterDay">Filter with day</label>
+                  <input type="date" name="filterDay" id="filterDay" class="form-control">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-11">
+              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-all" aria-selected="true">Semua</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="pills-confirm-tab" data-toggle="pill" href="#pills-confirm" role="tab" aria-controls="pills-confirm" aria-selected="false">Dikonfirmasi</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="pills-process-tab" data-toggle="pill" href="#pills-process" role="tab" aria-controls="pills-process" aria-selected="false">Diproses</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="pills-sent-tab" data-toggle="pill" href="#pills-sent" role="tab" aria-controls="pills-sent" aria-selected="false">Dikirim</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="pills-finish-tab" data-toggle="pill" href="#pills-finish" role="tab" aria-controls="pills-finish" aria-selected="false">Tiba di Tujuan</a>
+                </li>
+              </ul>
+              <div class="tab-content mt-4" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+                  <div class="card card-orders">
+                    <div class="card-body">
+                      <div class="transaction-date">
+                        <p class="date-text">20 Januari 2021</p>
+                      </div>
+                      <div class="transaction-details">
+                        <div class="row">
+                          <div class="col-6 col-md-4">
+                            <div class="title-transaction">Transaction Kode</div>
+                            <div class="subtitle-transaction">#JBL-09898</div>
+                          </div>
+                          <div class="col-6 col-md-4">
+                            <div class="title-transaction">Status</div>
+                            <div class="subtitle-transaction">DiKonfirmasi</div>
+                          </div>
+                          <div class="col-md-4 mt-2">
+                            <div class="title-transaction">Total Belanja</div>
+                            <div class="price-transaction">Rp. 500.000</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="transaction-product">
+                        <div class="row align-items-center">
+                          <div class="col-4 col-md-2">
+                            <img src="/images/transaction-photo.jpg" class="w-100" alt="">
+                          </div>
+                          <div class="col-8 col-md-4">
+                            <div class="product-name">Sofa Ternyaman</div>
+                            <div class="product-count">Jumlah Beli 1</div>
+                          </div>
+                          <div class="col-md-4 my-2">
+                            <div class="title-transaction">Total Produk Price</div>
+                            <div class="price-transaction">Rp. 500.000</div>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="" class="btn btn-block btn-dark">Buy Again</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="transaction-product">
+                        <div class="row align-items-center">
+                          <div class="col-4 col-md-2">
+                            <img src="/images/transaction-photo.jpg" class="w-100" alt="">
+                          </div>
+                          <div class="col-8 col-md-4">
+                            <div class="product-name">Sofa Ternyaman</div>
+                            <div class="product-count">Jumlah Beli 1</div>
+                          </div>
+                          <div class="col-md-4 my-2">
+                            <div class="title-transaction">Total Produk Price</div>
+                            <div class="price-transaction">Rp. 500.000</div>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="" class="btn btn-block btn-dark">Buy Again</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card card-orders">
+                    <div class="card-body">
+                      <div class="transaction-date">
+                        <p class="date-text">20 Januari 2021</p>
+                      </div>
+                      <div class="transaction-details">
+                        <div class="row">
+                          <div class="col-6 col-md-4">
+                            <div class="title-transaction">Transaction Kode</div>
+                            <div class="subtitle-transaction">#JBL-09898</div>
+                          </div>
+                          <div class="col-6 col-md-4">
+                            <div class="title-transaction">Status</div>
+                            <div class="subtitle-transaction">Pesanan Selesai</div>
+                          </div>
+                          <div class="col-md-4 mt-2">
+                            <div class="title-transaction">Total Belanja</div>
+                            <div class="price-transaction">Rp. 500.000</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="transaction-product">
+                        <div class="row align-items-center">
+                          <div class="col-4 col-md-2">
+                            <img src="/images/transaction-photo.jpg" class="w-100" alt="">
+                          </div>
+                          <div class="col-8 col-md-4">
+                            <div class="product-name">Sofa Ternyaman</div>
+                            <div class="product-count">Jumlah Beli 1</div>
+                          </div>
+                          <div class="col-md-4 my-2">
+                            <div class="title-transaction">Total Produk Price</div>
+                            <div class="price-transaction">Rp. 500.000</div>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="" class="btn btn-block btn-dark">Buy Again</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="transaction-product">
+                        <div class="row align-items-center">
+                          <div class="col-4 col-md-2">
+                            <img src="/images/transaction-photo.jpg" class="w-100" alt="">
+                          </div>
+                          <div class="col-8 col-md-4">
+                            <div class="product-name">Sofa Ternyaman</div>
+                            <div class="product-count">Jumlah Beli 1</div>
+                          </div>
+                          <div class="col-md-4 my-2">
+                            <div class="title-transaction">Total Produk Price</div>
+                            <div class="price-transaction">Rp. 500.000</div>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="" class="btn btn-block btn-dark">Buy Again</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pills-confirm" role="tabpanel" aria-labelledby="pills-confirm-tab">
+                  <h5 class="text-center">Transactions Not Found</h5>
+                </div>
+                <div class="tab-pane fade" id="pills-process" role="tabpanel" aria-labelledby="pills-process-tab">
+                  <h5 class="text-center">Transactions Not Found</h5>
+                </div>
+                <div class="tab-pane fade" id="pills-sent" role="tabpanel" aria-labelledby="pills-sent-tab">
+                  <h5 class="text-center">Transactions Not Found</h5>
+                </div>
+                <div class="tab-pane fade" id="pills-finish" role="tabpanel" aria-labelledby="pills-finish-tab">
+                  <h5 class="text-center"><div class="card card-orders">
+                    <div class="card-body">
+                      <div class="transaction-date">
+                        <p class="date-text">20 Januari 2021</p>
+                      </div>
+                      <div class="transaction-details">
+                        <div class="row">
+                          <div class="col-6 col-md-4">
+                            <div class="title-transaction">Transaction Kode</div>
+                            <div class="subtitle-transaction">#JBL-09898</div>
+                          </div>
+                          <div class="col-6 col-md-4">
+                            <div class="title-transaction">Status</div>
+                            <div class="subtitle-transaction">Pesanan Selesai</div>
+                          </div>
+                          <div class="col-md-4 mt-2">
+                            <div class="title-transaction">Total Belanja</div>
+                            <div class="price-transaction">Rp. 500.000</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="transaction-product">
+                        <div class="row align-items-center">
+                          <div class="col-4 col-md-2">
+                            <img src="/images/transaction-photo.jpg" class="w-100" alt="">
+                          </div>
+                          <div class="col-8 col-md-4">
+                            <div class="product-name">Sofa Ternyaman</div>
+                            <div class="product-count">Jumlah Beli 1</div>
+                          </div>
+                          <div class="col-md-4 my-2">
+                            <div class="title-transaction">Total Produk Price</div>
+                            <div class="price-transaction">Rp. 500.000</div>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="" class="btn btn-block btn-dark">Buy Again</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="transaction-product">
+                        <div class="row align-items-center">
+                          <div class="col-4 col-md-2">
+                            <img src="/images/transaction-photo.jpg" class="w-100" alt="">
+                          </div>
+                          <div class="col-8 col-md-4">
+                            <div class="product-name">Sofa Ternyaman</div>
+                            <div class="product-count">Jumlah Beli 1</div>
+                          </div>
+                          <div class="col-md-4 my-2">
+                            <div class="title-transaction">Total Produk Price</div>
+                            <div class="price-transaction">Rp. 500.000</div>
+                          </div>
+                          <div class="col-md-2">
+                            <a href="" class="btn btn-block btn-dark">Buy Again</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between pb-4">
+          <div class="col-md-3">
+            <img src="/images/logo.png" class="logo-footer" alt="" />
+            <p>Lorem Ipsum Sit amet mamang samlekum</p>
+          </div>
+          <div class="col-md-7">
+            <div class="row">
+              <div class="col-md-4">
+                <h5 class="mt-4 mt-lg-0">Jubeliness</h5>
+                <ul>
+                  <li><a href="">About</a></li>
+                  <li><a href="">Tata Cara Order</a></li>
+                  <li><a href="">Kebijakan Privasi</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <h5 class="mt-4 mt-lg-0">Explore</h5>
+                <ul>
+                  <li><a href="">Donasi Bersama</a></li>
+                  <li><a href="">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <h5 class="mt-4 mt-lg-0">Social Media</h5>
+                <ul>
+                  <li><a href="">Instagram</a></li>
+                  <li><a href="">Facebook</a></li>
+                  <li><a href="">Twitter</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-12">
+            <p class="copyright">&copy; 2020 - 2021 Jubeliness • All rights reserved • Love from Jakarta</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Akhir footer -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="/vendor/vue/vue.js"></script>
+    <script>
+      var navbar = new Vue({
+        el: '#navbar',
+        mounted() {
+          AOS.init();
+        },
+        data: {
+          searchBarInput: '',
+        },
+        methods: {
+          showSearchBar: function () {},
+        },
+      });
+    </script>
+    <script src="script/navbar-scroll.js"></script>
+    <script src="script/dropdown.js"></script>
+    <script src="script/preloader.js"></script>
+  </body>
+</html>
