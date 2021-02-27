@@ -11457,7 +11457,7 @@ footer ul li a:hover {
 
 @media (max-width: 991.98px) {
   .page-orders .order-list h2 {
-    font-size: 20px;
+    font-size: 24px;
   }
   .page-orders .order-list p {
     font-size: 14px;
@@ -11496,6 +11496,15 @@ footer ul li a:hover {
   border-radius: 0;
   color: black;
   border-bottom: 2px solid black;
+}
+
+@media (max-width: 991.98px) {
+  .settings h2 {
+    font-size: 24px;
+  }
+  .settings p {
+    font-size: 14px;
+  }
 }
 
 .component-category {
