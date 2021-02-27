@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
 
@@ -27,22 +24,12 @@
 
     <!-- Navbar -->
     <div id="navbar">
-      <nav
-        class="navbar navbar-expand-lg bg-white d-none d-lg-block align-items-center navbar-light bg-light navbar-jubeliness fixed-top navbar-fixed-top"
-      >
+      <nav class="navbar navbar-expand-lg bg-white d-none d-lg-block align-items-center navbar-light bg-light navbar-jubeliness fixed-top navbar-fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
             <img src="images/logo.png" width="70" alt="" />
           </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -51,15 +38,10 @@
                 <a class="nav-link" href="categories.html">Kategori</a>
               </li>
             </ul>
-            <ul class="navbar-nav w-100 mx-2 position-relative">
+            <ul class="navbar-nav w-100 position-relative">
               <form class="navbar-search d-none d-lg-flex">
                 <div class="input-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Cari barang apa hari ini ?"
-                    v-model="searchBarInput"
-                  />
+                  <input type="text" class="form-control" placeholder="Cari barang apa hari ini ?" v-model="searchBarInput" />
                   <div class="input-group-append">
                     <span class="input-group-text">
                       <img src="images/icon-search.svg" alt="" />
@@ -67,10 +49,7 @@
                   </div>
                 </div>
               </form>
-              <div
-                class="search-bar-result position-absolute"
-                v-if="searchBarInput"
-              >
+              <div class="search-bar-result position-absolute" v-if="searchBarInput">
                 <div class="card">
                   <div class="card-body overflow-auto">
                     <div class="result-search d-flex align-items-center">
@@ -107,26 +86,18 @@
                 </div>
               </div>
             </ul>
-            <ul class="navbar-nav ml-3 d-none d-lg-flex">
-              <li class="nav-item">
-                <a
-                  class="nav-link position-relative hover-cart-dropdown"
-                  href="cart.html"
-                >
+            <ul class="navbar-nav mx-2 d-none d-lg-flex">
+              <li class="nav-item mx-2">
+                <a class="nav-link position-relative hover-cart-dropdown" href="cart.html">
                   <img src="images/cart-fill.svg" alt="" />
                   <div class="cart-badge position-absolute">7</div>
                 </a>
               </li>
               <li class="nav-item ml-3">
-                <a class="nav-link" href="#">
-                  <img src="images/notification.svg" alt="" />
-                </a>
+                <a class="btn btn-outline-dark px-4 py-2" href="register.html">Daftar</a>
               </li>
               <li class="nav-item ml-3">
-                <a class="btn btn-outline-dark px-4 py-2" href="#">Daftar</a>
-              </li>
-              <li class="nav-item ml-3">
-                <a class="btn btn-dark px-4 py-2" href="#">Masuk</a>
+                <a class="btn btn-dark px-4 py-2" href="login.html">Masuk</a>
               </li>
             </ul>
           </div>
@@ -142,11 +113,7 @@
                   <a href="details.html" class="cart-product-detail">
                     <div class="row">
                       <div class="col-2">
-                        <img
-                          src="/images/product-1.jpg"
-                          class="w-100 h-100"
-                          alt=""
-                        />
+                        <img src="/images/product-1.jpg" class="w-100 h-100" alt="" />
                       </div>
                       <div class="col-6">
                         <div class="cart-product-name">Buku Startup $100</div>
@@ -160,11 +127,7 @@
                   <a href="details.html" class="cart-product-detail">
                     <div class="row">
                       <div class="col-2">
-                        <img
-                          src="/images/product-2.jpg"
-                          class="w-100 h-100"
-                          alt=""
-                        />
+                        <img src="/images/product-2.jpg" class="w-100 h-100" alt="" />
                       </div>
                       <div class="col-6">
                         <div class="cart-product-name">Pulpen Pelangi</div>
@@ -183,21 +146,14 @@
       </nav>
 
       <!-- navbar-mobile -->
-      <nav
-        class="navbar-jubeliness-mobile d-flex d-lg-none justify-content-between align-items-center"
-      >
+      <nav class="navbar-jubeliness-mobile d-flex d-lg-none justify-content-between align-items-center">
         <a href="/index.html" class="navbar-brand">
           <img src="/images/logo.png" alt="" />
         </a>
         <div class="navbar-mobile-search position-relative">
           <form class="navbar-search">
             <div class="input-group">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Cari barang apa hari ini ?"
-                v-model="searchBarInput"
-              />
+              <input type="text" class="form-control" placeholder="Cari barang apa hari ini ?" v-model="searchBarInput" />
               <div class="input-group-append">
                 <span class="input-group-text">
                   <img src="images/icon-search.svg" alt="" />
@@ -205,10 +161,7 @@
               </div>
             </div>
           </form>
-          <div
-            class="search-bar-result position-absolute"
-            v-if="searchBarInput"
-          >
+          <div class="search-bar-result position-absolute" v-if="searchBarInput">
             <div class="card">
               <div class="card-body overflow-auto">
                 <div class="result-search d-flex align-items-center">
@@ -257,9 +210,7 @@
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  Product Details
-                </li>
+                <li class="breadcrumb-item active" aria-current="page">Product Details</li>
               </ol>
             </nav>
           </div>
@@ -272,26 +223,12 @@
             <div class="row">
               <div class="col-lg-5" data-aos="zoom-in">
                 <transition name="slide-fade" mode="out-in">
-                  <img
-                    :src="photos[activePhoto].url"
-                    :key="photos[activePhoto].id"
-                    alt=""
-                    class="thumbnail-image main-image w-100"
-                  />
+                  <img :src="photos[activePhoto].url" :key="photos[activePhoto].id" alt="" class="thumbnail-image main-image w-100" />
                 </transition>
                 <div class="row">
-                  <div
-                    class="col-3"
-                    v-for="(photo, index) in photos"
-                    :key="photo.id"
-                  >
+                  <div class="col-3" v-for="(photo, index) in photos" :key="photo.id">
                     <a href="#" @mouseover="changeActive(index)">
-                      <img
-                        :src="photo.url"
-                        class="w-100 thumbnail-image"
-                        :class="{ active: index == activePhoto }"
-                        alt=""
-                      />
+                      <img :src="photo.url" class="w-100 thumbnail-image" :class="{ active: index == activePhoto }" alt="" />
                     </a>
                   </div>
                 </div>
@@ -301,66 +238,20 @@
                 <p class="text-muted">Peralatan Tulis</p>
                 <div class="product-price">Rp. 100.000</div>
                 <div class="count d-flex mt-3">
-                  <img
-                    src="images/button-minus.png"
-                    alt=""
-                    v-if="counter > 0"
-                    style="max-height: 25px"
-                    @click="counterMinus()"
-                  />
-                  <img
-                    src="images/button-minus.png"
-                    alt=""
-                    v-else
-                    style="max-height: 25px"
-                  />
-                  <input
-                    type="number"
-                    name="count"
-                    v-model="counter"
-                    min="1"
-                    :max="stock"
-                    id="count"
-                    style="width: 75px; font-size: 18px"
-                    class="border-top-0 border-right-0 border-left-0 text-center"
-                  />
-                  <img
-                    src="/images/button-plus.png"
-                    style="max-height: 25px"
-                    alt=""
-                    v-if="counter < stock"
-                    @click="counterPlus()"
-                  />
-                  <img
-                    src="/images/button-plus.png"
-                    style="max-height: 25px"
-                    alt=""
-                    v-else
-                  />
+                  <img src="images/button-minus.png" alt="" v-if="counter > 0" style="max-height: 25px" @click="counterMinus()" />
+                  <img src="images/button-minus.png" alt="" v-else style="max-height: 25px" />
+                  <input type="number" name="count" v-model="counter" min="1" :max="stock" id="count" style="width: 75px; font-size: 18px" class="border-top-0 border-right-0 border-left-0 text-center" />
+                  <img src="/images/button-plus.png" style="max-height: 25px" alt="" v-if="counter < stock" @click="counterPlus()" />
+                  <img src="/images/button-plus.png" style="max-height: 25px" alt="" v-else />
                   <div class="count-stock ml-3">Stok {{ stock }}</div>
                 </div>
-                <p class="text-danger mt-2" v-if="counter <= 0">
-                  This product's minimum quantity is 1 item(s)
-                </p>
-                <p class="text-danger mt-2" v-if="counter > stock">
-                  Maximum quantity to purchase this item is {{ stock }}
-                </p>
-                <div
-                  class="subtotal d-flex mt-4 align-items-center justify-content-between"
-                >
+                <p class="text-danger mt-2" v-if="counter <= 0">This product's minimum quantity is 1 item(s)</p>
+                <p class="text-danger mt-2" v-if="counter > stock">Maximum quantity to purchase this item is {{ stock }}</p>
+                <div class="subtotal d-flex mt-4 align-items-center justify-content-between">
                   <p class="text-muted m-0">Subtotal</p>
-                  <div class="subtotal-price">
-                    Rp {{ new Intl.NumberFormat().format(counter * price) }}
-                  </div>
+                  <div class="subtotal-price">Rp {{ new Intl.NumberFormat().format(counter * price) }}</div>
                 </div>
-                <button
-                  type="submit"
-                  class="btn btn-dark btn-addCart px-4 py-2 mt-3"
-                  name="addToCart"
-                  :disabled="counter <= 0 || counter > stock"
-                >
-                  + Keranjang
-                </button>
+                <button type="submit" class="btn btn-dark btn-addCart px-4 py-2 mt-3" name="addToCart" :disabled="counter <= 0 || counter > stock">+ Keranjang</button>
               </div>
             </div>
             <div class="row mt-4">
@@ -371,19 +262,12 @@
             <div class="row">
               <div class="col-12 col-lg-8">
                 <p class="description-product">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Velit non optio ratione fugiat odit soluta nesciunt quisquam
-                  maiores natus explicabo? Minima modi quia placeat ducimus
-                  doloremque eum, perspiciatis officiis reprehenderit?
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit non optio ratione fugiat odit soluta nesciunt quisquam maiores natus explicabo? Minima modi quia placeat ducimus doloremque eum, perspiciatis officiis
+                  reprehenderit?
                 </p>
                 <p class="description-product">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-                  assumenda excepturi exercitationem inventore odio tempore
-                  veniam minus ipsa, temporibus fuga perferendis, aut eum?
-                  Repellat, iste quae. Error esse repudiandae assumenda, modi
-                  qui adipisci, distinctio voluptatum cupiditate dolorem dolorum
-                  omnis. Id nihil unde saepe vero excepturi architecto dolores
-                  incidunt. Voluptatibus, nobis?
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae assumenda excepturi exercitationem inventore odio tempore veniam minus ipsa, temporibus fuga perferendis, aut eum? Repellat, iste quae. Error esse repudiandae
+                  assumenda, modi qui adipisci, distinctio voluptatum cupiditate dolorem dolorum omnis. Id nihil unde saepe vero excepturi architecto dolores incidunt. Voluptatibus, nobis?
                 </p>
               </div>
             </div>
@@ -402,10 +286,7 @@
             <div class="col-6 col-lg-3">
               <a href="details.html" class="component-product">
                 <div class="product-thumbnail">
-                  <div
-                    class="product-image"
-                    style="background-image: url('images/product-1.jpg')"
-                  ></div>
+                  <div class="product-image" style="background-image: url('images/product-1.jpg')"></div>
                 </div>
                 <div class="product-name">Buku Startup $100</div>
                 <div class="product-price">Rp 100.000</div>
@@ -414,10 +295,7 @@
             <div class="col-6 col-lg-3">
               <a href="details.html" class="component-product">
                 <div class="product-thumbnail">
-                  <div
-                    class="product-image"
-                    style="background-image: url('images/product-2.jpg')"
-                  ></div>
+                  <div class="product-image" style="background-image: url('images/product-2.jpg')"></div>
                 </div>
                 <div class="product-name">Pulpen Pelangi</div>
                 <div class="product-price">Rp 30.000</div>
@@ -426,10 +304,7 @@
             <div class="col-6 col-lg-3">
               <a href="details.html" class="component-product">
                 <div class="product-thumbnail">
-                  <div
-                    class="product-image"
-                    style="background-image: url('images/product-3.jpg')"
-                  ></div>
+                  <div class="product-image" style="background-image: url('images/product-3.jpg')"></div>
                 </div>
                 <div class="product-name">Penggaris Unique</div>
                 <div class="product-price">Rp 60.000</div>
@@ -438,10 +313,7 @@
             <div class="col-6 col-lg-3">
               <a href="details.html" class="component-product">
                 <div class="product-thumbnail">
-                  <div
-                    class="product-image"
-                    style="background-image: url('images/product-4.jpg')"
-                  ></div>
+                  <div class="product-image" style="background-image: url('images/product-4.jpg')"></div>
                 </div>
                 <div class="product-name">Bubuk Maketti</div>
                 <div class="product-price">Rp 80.000</div>
@@ -450,10 +322,7 @@
             <div class="col-6 col-lg-3">
               <a href="details.html" class="component-product">
                 <div class="product-thumbnail">
-                  <div
-                    class="product-image"
-                    style="background-image: url('images/product-5.jpg')"
-                  ></div>
+                  <div class="product-image" style="background-image: url('images/product-5.jpg')"></div>
                 </div>
                 <div class="product-name">Tatakan Gelas</div>
                 <div class="product-price">Rp 50.000</div>
@@ -462,10 +331,7 @@
             <div class="col-6 col-lg-3">
               <a href="details.html" class="component-product">
                 <div class="product-thumbnail">
-                  <div
-                    class="product-image"
-                    style="background-image: url('images/product-6.jpg')"
-                  ></div>
+                  <div class="product-image" style="background-image: url('images/product-6.jpg')"></div>
                 </div>
                 <div class="product-name">Stabilo Transparan</div>
                 <div class="product-price">Rp 200.000</div>
@@ -474,10 +340,7 @@
             <div class="col-6 col-lg-3">
               <a href="details.html" class="component-product">
                 <div class="product-thumbnail">
-                  <div
-                    class="product-image"
-                    style="background-image: url('images/product-7.jpg')"
-                  ></div>
+                  <div class="product-image" style="background-image: url('images/product-7.jpg')"></div>
                 </div>
                 <div class="product-name">Kopi Cinta</div>
                 <div class="product-price">Rp 120.000</div>
@@ -486,10 +349,7 @@
             <div class="col-6 col-lg-3">
               <a href="details.html" class="component-product">
                 <div class="product-thumbnail">
-                  <div
-                    class="product-image"
-                    style="background-image: url('images/product-8.jpg')"
-                  ></div>
+                  <div class="product-image" style="background-image: url('images/product-8.jpg')"></div>
                 </div>
                 <div class="product-name">Monkey Toys</div>
                 <div class="product-price">Rp 300.000</div>
@@ -539,10 +399,7 @@
         </div>
         <div class="row text-center">
           <div class="col-12">
-            <p class="copyright">
-              &copy; 2020 - 2021 Jubeliness • All rights reserved • Love from
-              Jakarta
-            </p>
+            <p class="copyright">&copy; 2020 - 2021 Jubeliness • All rights reserved • Love from Jakarta</p>
           </div>
         </div>
       </div>
@@ -559,7 +416,7 @@
     <script src="/vendor/vue/vue.js"></script>
     <script>
       var gallery = new Vue({
-        el: "#gallery",
+        el: '#gallery',
         mounted() {
           AOS.init();
         },
@@ -568,19 +425,19 @@
           photos: [
             {
               id: 1,
-              url: "/images/detail-main.jpg",
+              url: '/images/detail-main.jpg',
             },
             {
               id: 2,
-              url: "/images/detail-2.jpg",
+              url: '/images/detail-2.jpg',
             },
             {
               id: 3,
-              url: "/images/detail-3.jpg",
+              url: '/images/detail-3.jpg',
             },
             {
               id: 4,
-              url: "/images/detail-4.jpg",
+              url: '/images/detail-4.jpg',
             },
           ],
           stock: 20,
@@ -602,12 +459,12 @@
       });
 
       var navbar = new Vue({
-        el: "#navbar",
+        el: '#navbar',
         mounted() {
           AOS.init();
         },
         data: {
-          searchBarInput: "",
+          searchBarInput: '',
         },
       });
     </script>

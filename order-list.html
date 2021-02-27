@@ -49,7 +49,7 @@
                 <a class="nav-link" href="categories.html">Kategori</a>
               </li>
             </ul>
-            <ul class="navbar-nav mx-2 position-relative" style="width: 70%;">
+            <ul class="navbar-nav mx-2 position-relative" style="width: 72%;">
               <form class="navbar-search d-none d-lg-flex">
                 <div class="input-group">
                   <input
@@ -105,8 +105,8 @@
                 </div>
               </div>
             </ul>
-            <ul class="navbar-nav ml-3 d-none d-lg-flex">
-              <li class="nav-item">
+            <ul class="navbar-nav mx-2 d-none d-lg-flex">
+              <li class="nav-item mx-2">
                 <a
                   class="nav-link position-relative hover-cart-dropdown"
                   href="cart.html"
@@ -115,12 +115,7 @@
                   <div class="cart-badge position-absolute">7</div>
                 </a>
               </li>
-              <li class="nav-item ml-4 mr-2">
-                <a class="nav-link" href="#">
-                  <img src="images/notification.svg" alt="" />
-                </a>
-              </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item ml-3 w-100 dropdown">
                 <a
                   href="#"
                   class="nav-link"
@@ -283,11 +278,11 @@
         <p class="text-muted">Apps</p>
       </div>
       </a>
-      <a href="categories.html" class="nav-list nav-kategori">
+      <a href="order-list.html" class="nav-list nav-pesanan active">
         <div class="thumbnail-icon mb-2">
-          <i class="bi bi-list-ul"></i>
+          <i class="bi bi-clipboard"></i>
         </div>
-        <p class="text-muted">Kategori</p>
+        <p class="text-muted">Pesanan</p>
       </div>
       </a>
       <a href="cart.html" class="nav-list nav-cart">
@@ -298,7 +293,7 @@
         <p class="text-muted">Keranjang</p>
       </div>
       </a>
-      <a href="login.html" class="nav-list nav-akun active">
+      <a href="login.html" class="nav-list nav-akun">
         <div class="thumbnail-icon mb-2">
           <i class="bi bi-person"></i>
         </div>
@@ -316,14 +311,6 @@
             <div class="col-12">
               <h2>Daftar Belanja</h2>
               <p class="text-muted">Belanja Terus sampai Puas</p>
-            </div>
-            <div class="col-md-4">
-              <form action="" method="GET">
-                <div class="form-group">
-                  <label for="filterDay">Filter with day</label>
-                  <input type="date" name="filterDay" id="filterDay" class="form-control">
-                </div>
-              </form>
             </div>
           </div>
           <div class="row">
@@ -377,9 +364,9 @@
                             <div class="product-name">Sofa Ternyaman</div>
                             <div class="product-count">Jumlah Beli 1</div>
                           </div>
-                          <div class="col-md-4 my-2">
+                          <div class="col-md-4 mt-2 mb-3">
                             <div class="title-transaction">Total Produk Price</div>
-                            <div class="price-transaction">Rp. 500.000</div>
+                            <div class="subtitle-transaction">Rp. 500.000</div>
                           </div>
                           <div class="col-md-2">
                             <a href="" class="btn btn-block btn-dark">Buy Again</a>
@@ -395,9 +382,9 @@
                             <div class="product-name">Sofa Ternyaman</div>
                             <div class="product-count">Jumlah Beli 1</div>
                           </div>
-                          <div class="col-md-4 my-2">
+                          <div class="col-md-4 mt-2 mb-3">
                             <div class="title-transaction">Total Produk Price</div>
-                            <div class="price-transaction">Rp. 500.000</div>
+                            <div class="subtitle-transaction">Rp. 500.000</div>
                           </div>
                           <div class="col-md-2">
                             <a href="" class="btn btn-block btn-dark">Buy Again</a>
@@ -419,7 +406,7 @@
                           </div>
                           <div class="col-6 col-md-4">
                             <div class="title-transaction">Status</div>
-                            <div class="subtitle-transaction">Pesanan Selesai</div>
+                            <div class="subtitle-transaction">DiKonfirmasi</div>
                           </div>
                           <div class="col-md-4 mt-2">
                             <div class="title-transaction">Total Belanja</div>
@@ -436,9 +423,9 @@
                             <div class="product-name">Sofa Ternyaman</div>
                             <div class="product-count">Jumlah Beli 1</div>
                           </div>
-                          <div class="col-md-4 my-2">
+                          <div class="col-md-4 mt-2 mb-3">
                             <div class="title-transaction">Total Produk Price</div>
-                            <div class="price-transaction">Rp. 500.000</div>
+                            <div class="subtitle-transaction">Rp. 500.000</div>
                           </div>
                           <div class="col-md-2">
                             <a href="" class="btn btn-block btn-dark">Buy Again</a>
@@ -454,9 +441,9 @@
                             <div class="product-name">Sofa Ternyaman</div>
                             <div class="product-count">Jumlah Beli 1</div>
                           </div>
-                          <div class="col-md-4 my-2">
+                          <div class="col-md-4 mt-2 mb-3">
                             <div class="title-transaction">Total Produk Price</div>
-                            <div class="price-transaction">Rp. 500.000</div>
+                            <div class="subtitle-transaction">Rp. 500.000</div>
                           </div>
                           <div class="col-md-2">
                             <a href="" class="btn btn-block btn-dark">Buy Again</a>
@@ -476,65 +463,66 @@
                   <h5 class="text-center">Transactions Not Found</h5>
                 </div>
                 <div class="tab-pane fade" id="pills-finish" role="tabpanel" aria-labelledby="pills-finish-tab">
-                  <h5 class="text-center"><div class="card card-orders">
-                    <div class="card-body">
-                      <div class="transaction-date">
-                        <p class="date-text">20 Januari 2021</p>
-                      </div>
-                      <div class="transaction-details">
-                        <div class="row">
-                          <div class="col-6 col-md-4">
-                            <div class="title-transaction">Transaction Kode</div>
-                            <div class="subtitle-transaction">#JBL-09898</div>
-                          </div>
-                          <div class="col-6 col-md-4">
-                            <div class="title-transaction">Status</div>
-                            <div class="subtitle-transaction">Pesanan Selesai</div>
-                          </div>
-                          <div class="col-md-4 mt-2">
-                            <div class="title-transaction">Total Belanja</div>
-                            <div class="price-transaction">Rp. 500.000</div>
+                    <div class="card card-orders">
+                      <div class="card-body">
+                        <div class="transaction-date">
+                          <p class="date-text">20 Januari 2021</p>
+                        </div>
+                        <div class="transaction-details">
+                          <div class="row">
+                            <div class="col-6 col-md-4">
+                              <div class="title-transaction">Transaction Kode</div>
+                              <div class="subtitle-transaction">#JBL-09898</div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                              <div class="title-transaction">Status</div>
+                              <div class="subtitle-transaction">Pesanan Selesai</div>
+                            </div>
+                            <div class="col-md-4 mt-2">
+                              <div class="title-transaction">Total Belanja</div>
+                              <div class="price-transaction">Rp. 500.000</div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="transaction-product">
-                        <div class="row align-items-center">
-                          <div class="col-4 col-md-2">
-                            <img src="/images/transaction-photo.jpg" class="w-100" alt="">
-                          </div>
-                          <div class="col-8 col-md-4">
-                            <div class="product-name">Sofa Ternyaman</div>
-                            <div class="product-count">Jumlah Beli 1</div>
-                          </div>
-                          <div class="col-md-4 my-2">
-                            <div class="title-transaction">Total Produk Price</div>
-                            <div class="price-transaction">Rp. 500.000</div>
-                          </div>
-                          <div class="col-md-2">
-                            <a href="" class="btn btn-block btn-dark">Buy Again</a>
+                        <div class="transaction-product">
+                          <div class="row align-items-center">
+                            <div class="col-4 col-md-2">
+                              <img src="/images/transaction-photo.jpg" class="w-100" alt="">
+                            </div>
+                            <div class="col-8 col-md-4">
+                              <div class="product-name">Sofa Ternyaman</div>
+                              <div class="product-count">Jumlah Beli 1</div>
+                            </div>
+                            <div class="col-md-4 mt-2 mb-3">
+                              <div class="title-transaction">Total Produk Price</div>
+                              <div class="subtitle-transaction">Rp. 500.000</div>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="" class="btn btn-block btn-dark">Buy Again</a>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="transaction-product">
-                        <div class="row align-items-center">
-                          <div class="col-4 col-md-2">
-                            <img src="/images/transaction-photo.jpg" class="w-100" alt="">
-                          </div>
-                          <div class="col-8 col-md-4">
-                            <div class="product-name">Sofa Ternyaman</div>
-                            <div class="product-count">Jumlah Beli 1</div>
-                          </div>
-                          <div class="col-md-4 my-2">
-                            <div class="title-transaction">Total Produk Price</div>
-                            <div class="price-transaction">Rp. 500.000</div>
-                          </div>
-                          <div class="col-md-2">
-                            <a href="" class="btn btn-block btn-dark">Buy Again</a>
+                        <div class="transaction-product">
+                          <div class="row align-items-center">
+                            <div class="col-4 col-md-2">
+                              <img src="/images/transaction-photo.jpg" class="w-100" alt="">
+                            </div>
+                            <div class="col-8 col-md-4">
+                              <div class="product-name">Sofa Ternyaman</div>
+                              <div class="product-count">Jumlah Beli 1</div>
+                            </div>
+                            <div class="col-md-4 my-2">
+                              <div class="title-transaction">Total Produk Price</div>
+                              <div class="price-transaction">Rp. 500.000</div>
+                            </div>
+                            <div class="col-md-2">
+                              <a href="" class="btn btn-block btn-dark">Buy Again</a>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div></h5>
+                  </div>
                 </div>
               </div>
             </div>

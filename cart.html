@@ -2,20 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
 
     <title>Keranjang | Jubeliness</title>
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link href="style/main.css" rel="stylesheet" />
   </head>
 
@@ -31,22 +25,12 @@
 
     <!-- Navbar -->
     <div id="navbar">
-      <nav
-        class="navbar navbar-expand-lg bg-white d-none d-lg-block align-items-center navbar-light bg-light navbar-jubeliness fixed-top navbar-fixed-top"
-      >
+      <nav class="navbar navbar-expand-lg bg-white d-none d-lg-block align-items-center navbar-light bg-light navbar-jubeliness fixed-top navbar-fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
             <img src="images/logo.png" width="70" alt="" />
           </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -55,15 +39,10 @@
                 <a class="nav-link" href="categories.html">Kategori</a>
               </li>
             </ul>
-            <ul class="navbar-nav mx-2 position-relative" style="width: 70%;">
+            <ul class="navbar-nav mx-2 position-relative" style="width: 72%">
               <form class="navbar-search d-none d-lg-flex">
                 <div class="input-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Cari barang apa hari ini ?"
-                    v-model="searchBarInput"
-                  />
+                  <input type="text" class="form-control" placeholder="Cari barang apa hari ini ?" v-model="searchBarInput" />
                   <div class="input-group-append">
                     <span class="input-group-text">
                       <img src="images/icon-search.svg" alt="" />
@@ -71,10 +50,7 @@
                   </div>
                 </div>
               </form>
-              <div
-                class="search-bar-result position-absolute"
-                v-if="searchBarInput"
-              >
+              <div class="search-bar-result position-absolute" v-if="searchBarInput">
                 <div class="card">
                   <div class="card-body overflow-auto">
                     <div class="result-search d-flex align-items-center">
@@ -111,41 +87,21 @@
                 </div>
               </div>
             </ul>
-            <ul class="navbar-nav ml-3 d-none d-lg-flex">
-              <li class="nav-item">
-                <a
-                  class="nav-link position-relative hover-cart-dropdown"
-                  href="cart.html"
-                >
+            <ul class="navbar-nav mx-2 d-none d-lg-flex">
+              <li class="nav-item mx-2">
+                <a class="nav-link position-relative hover-cart-dropdown" href="cart.html">
                   <img src="images/cart-fill.svg" alt="" />
                   <div class="cart-badge position-absolute">7</div>
                 </a>
               </li>
-              <li class="nav-item ml-4 mr-2">
-                <a class="nav-link" href="#">
-                  <img src="images/notification.svg" alt="" />
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  href="#"
-                  class="nav-link"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                >
-                  <img
-                    src="/images/user_pc.png"
-                    alt="profile"
-                    class="rounded-circle mr-2 profile-picture"
-                  />
+              <li class="nav-item ml-3 w-100 dropdown">
+                <a href="#" class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown">
+                  <img src="/images/user_pc.png" alt="profile" class="rounded-circle mr-2 profile-picture" />
                   Hi, Hafizh
                 </a>
                 <div class="dropdown-menu">
                   <a href="/dashboard.html" class="dropdown-item">Purchase</a>
-                  <a href="/dashboard-account.html" class="dropdown-item"
-                    >Settings</a
-                  >
+                  <a href="/dashboard-account.html" class="dropdown-item">Settings</a>
                   <div class="dropdown-divider"></div>
                   <a href="/" class="dropdown-item">logout</a>
                 </div>
@@ -164,11 +120,7 @@
                   <a href="details.html" class="cart-product-detail">
                     <div class="row">
                       <div class="col-2">
-                        <img
-                          src="/images/product-1.jpg"
-                          class="w-100 h-100"
-                          alt=""
-                        />
+                        <img src="/images/product-1.jpg" class="w-100 h-100" alt="" />
                       </div>
                       <div class="col-6">
                         <div class="cart-product-name">Buku Startup $100</div>
@@ -182,11 +134,7 @@
                   <a href="details.html" class="cart-product-detail">
                     <div class="row">
                       <div class="col-2">
-                        <img
-                          src="/images/product-2.jpg"
-                          class="w-100 h-100"
-                          alt=""
-                        />
+                        <img src="/images/product-2.jpg" class="w-100 h-100" alt="" />
                       </div>
                       <div class="col-6">
                         <div class="cart-product-name">Pulpen Pelangi</div>
@@ -205,21 +153,14 @@
       </nav>
 
       <!-- navbar-mobile -->
-      <nav
-        class="navbar-jubeliness-mobile d-flex d-lg-none justify-content-between align-items-center"
-      >
+      <nav class="navbar-jubeliness-mobile d-flex d-lg-none justify-content-between align-items-center">
         <a href="/index.html" class="navbar-brand">
           <img src="/images/logo.png" alt="" />
         </a>
         <div class="navbar-mobile-search position-relative">
           <form class="navbar-search">
             <div class="input-group">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Cari barang apa hari ini ?"
-                v-model="searchBarInput"
-              />
+              <input type="text" class="form-control" placeholder="Cari barang apa hari ini ?" v-model="searchBarInput" />
               <div class="input-group-append">
                 <span class="input-group-text">
                   <img src="images/icon-search.svg" alt="" />
@@ -227,10 +168,7 @@
               </div>
             </div>
           </form>
-          <div
-            class="search-bar-result position-absolute"
-            v-if="searchBarInput"
-          >
+          <div class="search-bar-result position-absolute" v-if="searchBarInput">
             <div class="card">
               <div class="card-body overflow-auto">
                 <div class="result-search d-flex align-items-center">
@@ -272,29 +210,24 @@
     <!-- Akhit Navbar -->
 
     <!-- bottom-navigasi -->
-    <nav
-      class="navbar-jubeliness-bottom bg-dark d-flex d-lg-none fixed-bottom justify-content-around align-items-center text-center"
-    >
+    <nav class="navbar-jubeliness-bottom bg-dark d-flex d-lg-none fixed-bottom justify-content-around align-items-center text-center">
       <a href="index.html" class="nav-list nav-home">
         <div class="thumbnail-icon mb-2">
           <i class="bi bi-house"></i>
         </div>
         <p class="text-muted">Home</p>
-      </div>
       </a>
       <a href="#" class="nav-list nav-apps">
         <div class="thumbnail-icon mb-2">
           <i class="bi bi-app-indicator"></i>
         </div>
         <p class="text-muted">Apps</p>
-      </div>
       </a>
-      <a href="categories.html" class="nav-list nav-kategori">
+      <a href="order-list.html" class="nav-list nav-pesanan">
         <div class="thumbnail-icon mb-2">
-          <i class="bi bi-list-ul"></i>
+          <i class="bi bi-clipboard"></i>
         </div>
-        <p class="text-muted">Kategori</p>
-      </div>
+        <p class="text-muted">Pesanan</p>
       </a>
       <a href="cart.html" class="nav-list nav-cart active">
         <div class="thumbnail-icon mb-2 position-relative">
@@ -302,14 +235,12 @@
           <div class="cart-badge position-absolute">3</div>
         </div>
         <p class="text-muted">Keranjang</p>
-      </div>
       </a>
       <a href="settings.html" class="nav-list nav-akun">
         <div class="thumbnail-icon mb-2">
           <i class="bi bi-person"></i>
         </div>
         <p class="text-muted">Akun</p>
-      </div>
       </a>
     </nav>
     <!-- akhir bottom-navigasi -->
@@ -323,9 +254,7 @@
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">
-                    Cart
-                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">Cart</li>
                 </ol>
               </nav>
             </div>
@@ -351,19 +280,10 @@
                 <tbody>
                   <tr>
                     <td>
-                      <input
-                        class="form-control m-auto"
-                        style="width: 25px"
-                        type="checkbox"
-                        id="gridCheck"
-                      />
+                      <input class="form-control m-auto" style="width: 25px" type="checkbox" id="gridCheck" />
                     </td>
                     <td style="width: 20%">
-                      <img
-                        src="/images/product-1.jpg"
-                        alt=""
-                        class="cart-image"
-                      />
+                      <img src="/images/product-1.jpg" alt="" class="cart-image" />
                     </td>
                     <td style="width: 20%">
                       <div class="product-title">Buku Startup $100</div>
@@ -382,26 +302,15 @@
                       <div class="product-subtitle">IDR</div>
                     </td>
                     <td>
-                      <a href="" class=""
-                        ><img src="/images/icon-delete.svg" alt=""
-                      /></a>
+                      <a href="" class=""><img src="/images/icon-delete.svg" alt="" /></a>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <input
-                        class="form-control m-auto"
-                        style="width: 25px"
-                        type="checkbox"
-                        id="gridCheck"
-                      />
+                      <input class="form-control m-auto" style="width: 25px" type="checkbox" id="gridCheck" />
                     </td>
                     <td style="width: 20%">
-                      <img
-                        src="/images/product-2.jpg"
-                        alt=""
-                        class="cart-image"
-                      />
+                      <img src="/images/product-2.jpg" alt="" class="cart-image" />
                     </td>
                     <td style="width: 20%">
                       <div class="product-title">Pulpen Pelangi</div>
@@ -420,26 +329,15 @@
                       <div class="product-subtitle">IDR</div>
                     </td>
                     <td>
-                      <a href="" class=""
-                        ><img src="/images/icon-delete.svg" alt=""
-                      /></a>
+                      <a href="" class=""><img src="/images/icon-delete.svg" alt="" /></a>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <input
-                        class="form-control m-auto"
-                        style="width: 25px"
-                        type="checkbox"
-                        id="gridCheck"
-                      />
+                      <input class="form-control m-auto" style="width: 25px" type="checkbox" id="gridCheck" />
                     </td>
                     <td style="width: 20%">
-                      <img
-                        src="/images/product-3.jpg"
-                        alt=""
-                        class="cart-image"
-                      />
+                      <img src="/images/product-3.jpg" alt="" class="cart-image" />
                     </td>
                     <td style="width: 20%">
                       <div class="product-title">Penggaris Unique</div>
@@ -458,9 +356,7 @@
                       <div class="product-subtitle">IDR</div>
                     </td>
                     <td>
-                      <a href="" class=""
-                        ><img src="/images/icon-delete.svg" alt=""
-                      /></a>
+                      <a href="" class=""><img src="/images/icon-delete.svg" alt="" /></a>
                     </td>
                   </tr>
                 </tbody>
@@ -479,25 +375,13 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="addres">Alamat</label>
-                <input
-                  type="text"
-                  name="addres"
-                  id="addres"
-                  class="form-control form-store"
-                  value="Setra Duta Cemara"
-                />
+                <input type="text" name="addres" id="addres" class="form-control form-store" value="Setra Duta Cemara" />
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label for="postal-code">Kode Pos</label>
-                <input
-                  type="number"
-                  name="postal-code"
-                  id="postal-code"
-                  class="form-control form-store"
-                  value="123999"
-                />
+                <input type="number" name="postal-code" id="postal-code" class="form-control form-store" value="123999" />
               </div>
             </div>
             <div class="col-md-4">
@@ -540,13 +424,7 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="mobile">No Hp / WA</label>
-                <input
-                  type="tel"
-                  name="mobile"
-                  id="mobile"
-                  class="form-control form-store"
-                  value="+628 2020 11111"
-                />
+                <input type="tel" name="mobile" id="mobile" class="form-control form-store" value="+628 2020 11111" />
               </div>
             </div>
           </div>
@@ -572,15 +450,11 @@
               <div class="payment-subtitle">Kurir</div>
             </div>
             <div class="col-5 col-md-2 mt-2 mt-lg-0">
-              <div class="payment-title" style="font-weight: 600;">Rp. 505.000</div>
+              <div class="payment-title" style="font-weight: 600">Rp. 505.000</div>
               <div class="payment-subtitle">Total</div>
             </div>
             <div class="col-12 col-md-3 mt-2">
-              <a
-                href="checkout.html"
-                class="btn btn-dark btn-block px-4 mt-1"
-                >Checkout Now</a
-              >
+              <a href="checkout.html" class="btn btn-dark btn-block px-4 mt-1">Checkout Now</a>
             </div>
           </div>
         </div>
@@ -625,10 +499,7 @@
         </div>
         <div class="row text-center">
           <div class="col-12">
-            <p class="copyright">
-              &copy; 2020 - 2021 Jubeliness • All rights reserved • Love from
-              Jakarta
-            </p>
+            <p class="copyright">&copy; 2020 - 2021 Jubeliness • All rights reserved • Love from Jakarta</p>
           </div>
         </div>
       </div>
@@ -645,12 +516,12 @@
     <script src="/vendor/vue/vue.js"></script>
     <script>
       var navbar = new Vue({
-        el: "#navbar",
+        el: '#navbar',
         mounted() {
           AOS.init();
         },
         data: {
-          searchBarInput: "",
+          searchBarInput: '',
         },
       });
     </script>
