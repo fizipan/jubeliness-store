@@ -11038,7 +11038,7 @@ footer ul li a:hover {
 .navbar-jubeliness-mobile .navigation-mobile .nav-item .dropdown-search {
   min-width: 22rem;
   top: 15px !important;
-  left: auto;
+  left: 2px !important;
 }
 
 .navbar-jubeliness-mobile .navigation-mobile .nav-item .cart-badge {
