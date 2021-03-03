@@ -149,97 +149,51 @@
       </nav>
 
       <!-- navbar-mobile -->
-      <nav class="navbar-jubeliness-mobile d-flex d-lg-none justify-content-between align-items-center">
+      <nav class="navbar-jubeliness-mobile navbar-fixed-top d-flex d-lg-none justify-content-between align-items-center">
         <a href="/index.html" class="navbar-brand">
-          <img src="/images/logo.png" alt="" />
+          <img src="/images/logo-mobile.svg" alt="" />
         </a>
-        <div class="navbar-mobile-search position-relative">
-          <form class="navbar-search">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Cari barang apa hari ini ?" v-model="searchBarInput" />
-              <div class="input-group-append">
-                <span class="input-group-text">
-                  <img src="images/icon-search.svg" alt="" />
-                </span>
+        <ul class="navigation-mobile">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown">
+              <img src="/images/search-icon-black.svg" alt="" />
+            </a>
+            <div class="dropdown-menu dropdown-search p-3 shadow">
+              <div class="navbar-mobile-search">
+                <form class="navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Cari barang apa hari ini ?" v-model="searchBarInput" />
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        <img src="images/icon-search.svg" alt="" />
+                      </span>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
-          </form>
-          <div class="search-bar-result position-absolute" v-if="searchBarInput">
-            <div class="card">
-              <div class="card-body overflow-auto">
-                <div class="result-search d-flex align-items-center">
-                  <div class="search-icon-bar mr-3">
-                    <img src="/images/search-icon.svg" width="20" alt="" />
-                  </div>
-                  <a href="" class="d-block">{{ searchBarInput }}</a>
-                </div>
-                <div class="result-search d-flex align-items-center">
-                  <div class="search-icon-bar mr-3">
-                    <img src="/images/search-icon.svg" width="20" alt="" />
-                  </div>
-                  <a href="" class="d-block">{{ searchBarInput }}</a>
-                </div>
-                <div class="result-search d-flex align-items-center">
-                  <div class="search-icon-bar mr-3">
-                    <img src="/images/search-icon.svg" width="20" alt="" />
-                  </div>
-                  <a href="" class="d-block">{{ searchBarInput }}</a>
-                </div>
-                <div class="result-search d-flex align-items-center">
-                  <div class="search-icon-bar mr-3">
-                    <img src="/images/search-icon.svg" width="20" alt="" />
-                  </div>
-                  <a href="" class="d-block">{{ searchBarInput }}</a>
-                </div>
-                <div class="result-search d-flex align-items-center">
-                  <div class="search-icon-bar mr-3">
-                    <img src="/images/search-icon.svg" width="20" alt="" />
-                  </div>
-                  <a href="" class="d-block">{{ searchBarInput }}</a>
-                </div>
-              </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link position-relative hover-cart-dropdown" href="cart.html">
+              <img src="images/cart-fill.svg" alt="" />
+              <div class="cart-badge position-absolute">7</div>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown">
+              <img src="/images/user_pc.png" alt="profile" width="25" class="rounded-circle" />
+            </a>
+            <div class="dropdown-menu">
+              <a href="order-list.html" class="dropdown-item">Purchase</a>
+              <a href="settings.html" class="dropdown-item">Settings</a>
+              <div class="dropdown-divider"></div>
+              <a href="/" class="dropdown-item">logout</a>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </nav>
     </div>
     <!-- Akhit Navbar -->
-
-    <!-- bottom-navigasi -->
-    <nav class="navbar-jubeliness-bottom bg-dark d-flex d-lg-none fixed-bottom justify-content-around align-items-center text-center">
-      <a href="index.html" class="nav-list nav-home">
-        <div class="thumbnail-icon mb-2">
-          <i class="bi bi-house"></i>
-        </div>
-        <p class="text-muted">Home</p>
-      </a>
-      <a href="#" class="nav-list nav-apps">
-        <div class="thumbnail-icon mb-2">
-          <i class="bi bi-app-indicator"></i>
-        </div>
-        <p class="text-muted">Apps</p>
-      </a>
-      <a href="order-list.html" class="nav-list nav-pesanan">
-        <div class="thumbnail-icon mb-2">
-          <i class="bi bi-clipboard"></i>
-        </div>
-        <p class="text-muted">Pesanan</p>
-      </a>
-      <a href="cart.html" class="nav-list nav-cart">
-        <div class="thumbnail-icon mb-2 position-relative">
-          <i class="bi bi-cart"></i>
-          <div class="cart-badge position-absolute">3</div>
-        </div>
-        <p class="text-muted">Keranjang</p>
-      </a>
-      <a href="login.html" class="nav-list nav-akun">
-        <div class="thumbnail-icon mb-2">
-          <i class="bi bi-box-arrow-in-right"></i>
-        </div>
-        <p class="text-muted">Masuk</p>
-      </a>
-    </nav>
-    <!-- akhir bottom-navigasi -->
 
     <!-- Page content -->
     <div class="page-content page-home">

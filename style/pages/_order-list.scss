@@ -1,9 +1,5 @@
 .page-orders {
-  padding-top: 20px;
-
-  @include media-breakpoint-down(md) {
-    padding-top: 10px;
-  }
+  padding-top: 100px;
   .order-list {
     @include media-breakpoint-down(md) {
       h2 {

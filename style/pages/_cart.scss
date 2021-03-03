@@ -1,74 +1,78 @@
-.store-cart {
-  h2 {
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 24px;
-    margin-top: 18px;
-    color: #0c0d36;
-  }
+.page-cart {
+  padding-top: 90px;
 
-  .product-title {
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 27px;
-    color: #0c0d36;
-
-    @include media-breakpoint-down(md) {
+  .store-cart {
+    h2 {
+      font-weight: bold;
       font-size: 16px;
+      line-height: 24px;
+      margin-top: 18px;
+      color: #0c0d36;
+    }
+
+    .product-title {
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 27px;
+      color: #0c0d36;
+
+      @include media-breakpoint-down(md) {
+        font-size: 16px;
+      }
+    }
+
+    .product-subtitle {
+      font-weight: normal;
+      font-size: 14px;
+      color: #979797;
+    }
+
+    .payment-title {
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 27px;
+      color: #0c0d36;
+    }
+
+    .payment-subtitle {
+      font-weight: normal;
+      font-size: 14px;
+      color: #979797;
+    }
+
+    .table-cart {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    th {
+      font-weight: 200;
+    }
+
+    .cart-image {
+      max-height: 85px;
+
+      @include media-breakpoint-down(md) {
+        max-height: 50px;
+      }
+    }
+
+    .btn-remove {
+      background-color: #fc5e84;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .form-control {
+      background-color: #f3f3f3;
     }
   }
 
-  .product-subtitle {
-    font-weight: normal;
-    font-size: 14px;
-    color: #979797;
+  .checkout-bottom {
+    border-top: 1px solid #f3f3f3;
+    color: white;
+    background-color: white;
   }
-
-  .payment-title {
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 27px;
-    color: #0c0d36;
-  }
-
-  .payment-subtitle {
-    font-weight: normal;
-    font-size: 14px;
-    color: #979797;
-  }
-
-  .table-cart {
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-
-  th {
-    font-weight: 200;
-  }
-
-  .cart-image {
-    max-height: 85px;
-
-    @include media-breakpoint-down(md) {
-      max-height: 50px;
-    }
-  }
-
-  .btn-remove {
-    background-color: #fc5e84;
-
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-
-  .form-control {
-    background-color: #f3f3f3;
-  }
-}
-
-.checkout-bottom {
-  border-top: 1px solid #f3f3f3;
-  color: white;
-  background-color: white;
 }

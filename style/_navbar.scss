@@ -56,16 +56,6 @@
     transition: all 1s ease-in-out;
   }
 
-  // @include media-breakpoint-down(md) {
-  //   .dropdown-menu {
-  //     width: 150px;
-  //   }
-  // }
-
-  .profile-picture {
-    max-height: 30px;
-  }
-
   .cart-badge {
     display: inline-block;
     min-width: 2em;
@@ -81,6 +71,16 @@
     // @include media-breakpoint-down(md) {
     //   left: 40px;
     // }
+  }
+
+  // @include media-breakpoint-down(md) {
+  //   .dropdown-menu {
+  //     width: 150px;
+  //   }
+  // }
+
+  .profile-picture {
+    max-height: 30px;
   }
 }
 
@@ -121,50 +121,33 @@
   left: 0;
   right: 0;
   z-index: 1000;
+
   .navbar-brand {
-    max-width: 50px;
-    max-height: 50px;
-    margin-bottom: 10px;
+    max-width: 45px;
+    max-height: 45px;
 
     img {
       width: 100%;
       height: 100%;
     }
   }
-  .navbar-mobile-search {
-    width: 100%;
 
-    .navbar-search {
-      width: 100%;
+  .navigation-mobile {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 60%;
 
-      .input-group-text {
-        background-color: #131921;
+    .nav-item {
+      list-style: none;
+
+      .dropdown-search {
+        min-width: 22rem;
+        top: 15px !important;
+        left: -5px !important;
       }
-    }
-  }
-}
 
-.navbar-jubeliness-bottom {
-  .nav-list {
-    display: block;
-    color: #acacac;
-    margin: 10px 0;
-    width: 24%;
-
-    i {
-      font-size: 20px;
-    }
-
-    p {
-      font-size: 10px;
-      margin: 0;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-
-    .thumbnail-icon {
       .cart-badge {
         display: inline-block;
         min-width: 2em;
@@ -172,24 +155,20 @@
         border-radius: 50%;
         font-size: 10px;
         text-align: center;
-        background-color: rgb(75, 75, 255);
-        color: white;
+        background-color: #29a867;
+        color: #fefefe;
         top: 2px;
-        left: 40px;
-
-        @include media-breakpoint-up(md) {
-          left: 85px;
-        }
+        left: 30px;
       }
     }
+  }
 
-    &.active {
-      .thumbnail-icon {
-        color: orange !important;
-      }
+  .navbar-mobile-search {
+    width: 100%;
 
-      p {
-        color: orange !important;
+    .navbar-search {
+      .input-group-text {
+        background-color: #131921;
       }
     }
   }
@@ -197,6 +176,6 @@
 
 .navbar-fixed-top.scrolled {
   background-color: white !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
   transition: background-color 200ms linear;
 }

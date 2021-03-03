@@ -1,0 +1,11 @@
+.page-procedures {
+  @include media-breakpoint-down(md) {
+    h1 {
+      font-size: 28px;
+    }
+
+    h4 {
+      font-size: 18px;
+    }
+  }
+}

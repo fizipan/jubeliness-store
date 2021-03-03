@@ -1,0 +1,14 @@
+.page-settings {
+  padding-top: 100px;
+  .settings {
+    @include media-breakpoint-down(md) {
+      h2 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
