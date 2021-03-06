@@ -322,7 +322,10 @@
                     <h6 class="mb-0">Grand Total</h6>
                     <div class="grand-total-price">Rp. 505.000</div>
                   </div>
-                  <a href="" class="btn btn-dark px-4 py-2 btn-block">Konfirmasi Pesanan</a>
+                  <div id="pay">
+                    <a href="order-list.html" target="_blank" class="btn btn-dark px-4 py-2 btn-block" @click="showButtonConfirm()">Bayar Pesanan</a>
+                    <a href="success.html" class="btn btn-success px-4 py-2 btn-block" v-if="buttonPay">Cek Pesananmu</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -396,6 +399,21 @@
         },
         methods: {
           showSearchBar: function () {},
+        },
+      });
+
+      var buttonPay = new Vue({
+        el: '#pay',
+        mounted() {
+          AOS.init();
+        },
+        data: {
+          buttonPay: false,
+        },
+        methods: {
+          showButtonConfirm() {
+            this.buttonPay = true;
+          },
         },
       });
     </script>

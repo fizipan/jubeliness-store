@@ -11895,6 +11895,38 @@ footer ul li a:hover {
   color: #979797;
 }
 
+.chat-box {
+  z-index: 999;
+  width: 70px;
+  height: 70px;
+  background: #343a40;
+  border-radius: 50%;
+  color: #fff;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.chat-box img {
+  height: 36px;
+  margin-top: 15px;
+}
+
+.chat-box:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background: black;
+  -webkit-box-shadow: 10px 10px 44px 16px rgba(0, 0, 0, 0.3);
+          box-shadow: 10px 10px 44px 16px rgba(0, 0, 0, 0.3);
+  bottom: 50px;
+}
+
+.flash-message {
+  min-height: 100vh;
+}
+
 .slide-fade-enter-active {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
