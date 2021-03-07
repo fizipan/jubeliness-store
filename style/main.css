@@ -11927,6 +11927,16 @@ footer ul li a:hover {
   min-height: 100vh;
 }
 
+.flash-message h2 {
+  font-size: 28px;
+}
+
+@media (max-width: 991.98px) {
+  .flash-message h2 {
+    font-size: 24px;
+  }
+}
+
 .flash-message img {
   max-height: 200px;
 }

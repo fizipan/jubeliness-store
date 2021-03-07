@@ -1,6 +1,16 @@
 .flash-message {
   min-height: 100vh;
 
+  h2 {
+    font-size: 28px;
+  }
+
+  @include media-breakpoint-down(md) {
+    h2 {
+      font-size: 24px;
+    }
+  }
+
   img {
     max-height: 200px;
   }
