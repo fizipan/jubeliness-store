@@ -11927,6 +11927,10 @@ footer ul li a:hover {
   min-height: 100vh;
 }
 
+.flash-message img {
+  max-height: 200px;
+}
+
 .slide-fade-enter-active {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
