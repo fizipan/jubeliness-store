@@ -11809,6 +11809,10 @@ footer ul li a:hover {
   color: #fa591d;
 }
 
+.card-orders .card-body .see-detail-transactions {
+  color: #131921;
+}
+
 .card-orders .card-body .transaction-date {
   padding: 0.8rem 1.2rem;
   border-bottom: 1px solid #d3d3d3;
