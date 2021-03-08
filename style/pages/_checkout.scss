@@ -10,7 +10,7 @@
   }
 
   h6 {
-    font-weight: normal;
+    font-weight: 500;
     font-size: 18px;
     margin-bottom: 15px;
     color: #292929;
@@ -57,11 +57,29 @@
   }
 
   .grand-total {
+    .text-grand-total {
+      font-weight: 500;
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: #292929;
+    }
     .grand-total-price {
       font-weight: bold;
       font-size: 20px;
       line-height: 24px;
       color: #000000;
+    }
+  }
+
+  .order-confirm {
+    .admin {
+      font-size: 14px;
+      color: #858585;
+    }
+
+    .number {
+      font-size: 16px;
+      font-weight: 500;
     }
   }
 }

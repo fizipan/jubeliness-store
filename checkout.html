@@ -292,7 +292,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 mt-4 mt-lg-0">
               <div class="card" style="box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07)">
                 <div class="card-body">
                   <h6>Payment Information</h6>
@@ -310,14 +310,22 @@
                       <div class="courier-name">Gojek</div>
                     </div>
                   </div>
-                  <hr />
                   <div class="grand-total d-flex justify-content-between mb-4 align-items-center">
-                    <h6 class="mb-0">Grand Total</h6>
+                    <div class="text-grand-total mb-0">Grand Total</div>
                     <div class="grand-total-price">Rp. 505.000</div>
                   </div>
-                  <div id="pay">
-                    <a href="order-list.html" target="_blank" class="btn btn-dark px-4 py-2 btn-block" @click="showButtonConfirm()">Bayar Pesanan</a>
-                    <a href="success.html" class="btn btn-success px-4 py-2 btn-block" v-if="buttonPay">Cek Pesananmu</a>
+                  <hr />
+                  <div id="order-confirm" class="order-confirm">
+                    <a href="#" class="btn btn-dark px-4 py-2 btn-block" @click="showButtonConfirm()" v-if="!buttonPay">Bayar Pesanan</a>
+                    <div class="confirm-payment" v-if="buttonPay">
+                      <h6 class="mt-2">Konfirmasi Pembayaran</h6>
+                      <img src="/images/logo_whatsapp.png" style="max-height: 45px" alt="" />
+                      <div class="whatsapp-number mt-2 d-flex justify-content-between">
+                        <div class="admin">Nando Sutasoma</div>
+                        <div class="number">6289604535310</div>
+                      </div>
+                      <a href="" target="_blank" class="btn btn-success px-4 py-2 btn-block mt-4">Konfirmasi Pembayaran</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -394,8 +402,8 @@
         },
       });
 
-      var buttonPay = new Vue({
-        el: '#pay',
+      var orderConfirm = new Vue({
+        el: '#order-confirm',
         mounted() {
           AOS.init();
         },

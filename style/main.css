@@ -11327,7 +11327,7 @@ footer ul li a:hover {
 }
 
 .page-checkout h6 {
-  font-weight: normal;
+  font-weight: 500;
   font-size: 18px;
   margin-bottom: 15px;
   color: #292929;
@@ -11370,11 +11370,28 @@ footer ul li a:hover {
   font-size: 14px;
 }
 
+.page-checkout .grand-total .text-grand-total {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #292929;
+}
+
 .page-checkout .grand-total .grand-total-price {
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
   color: #000000;
+}
+
+.page-checkout .order-confirm .admin {
+  font-size: 14px;
+  color: #858585;
+}
+
+.page-checkout .order-confirm .number {
+  font-size: 16px;
+  font-weight: 500;
 }
 
 @media (max-width: 991.98px) {
