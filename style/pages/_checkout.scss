@@ -1,10 +1,14 @@
 .page-checkout {
-  padding-top: 90px;
-  h4 {
-    @include media-breakpoint-down(md) {
+  padding-top: 100px;
+  @include media-breakpoint-down(md) {
+    h2 {
+      font-size: 24px;
+    }
+    h4 {
       font-size: 18px;
     }
   }
+
   h6 {
     font-weight: normal;
     font-size: 18px;
