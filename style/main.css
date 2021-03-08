@@ -11230,7 +11230,7 @@ footer ul li a:hover {
 }
 
 .page-cart .store-cart h2 {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   margin-top: 18px;
@@ -11238,6 +11238,7 @@ footer ul li a:hover {
 }
 
 .page-cart .store-cart .product-title {
+  margin-top: 15px;
   font-weight: normal;
   font-size: 18px;
   line-height: 27px;
@@ -11246,6 +11247,7 @@ footer ul li a:hover {
 
 @media (max-width: 991.98px) {
   .page-cart .store-cart .product-title {
+    margin-top: 0;
     font-size: 16px;
   }
 }
@@ -11254,6 +11256,11 @@ footer ul li a:hover {
   font-weight: normal;
   font-size: 14px;
   color: #979797;
+}
+
+.page-cart .store-cart .icon-delete {
+  display: block;
+  margin-top: 15px;
 }
 
 .page-cart .store-cart .payment-title {

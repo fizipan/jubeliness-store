@@ -6,7 +6,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Keranjang | Jubeliness</title>
+    <title>Shipment | Jubeliness</title>
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -208,38 +208,33 @@
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                  <li class="breadcrumb-item active" aria-current="page">Shipment</li>
                 </ol>
               </nav>
             </div>
           </div>
         </div>
       </section>
-      <section class="store-cart" id="cart">
+      <section class="store-cart">
         <div class="container">
           <div class="row" data-aos="fade-up" data-aos-delay="100">
             <div class="col-12 table-responsive">
               <table class="table table-borderless table-cart w-100">
                 <thead>
                   <tr>
-                    <th></th>
-                    <th>Image</th>
-                    <th>Nama Barang</th>
-                    <th>Harga</th>
-                    <th>Jumlah</th>
-                    <th>Subtotal</th>
-                    <th>Menu</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name Barang</th>
+                    <th scope="col">Harga</th>
+                    <th scope="col">Jumlah</th>
+                    <th scope="col">Subtotal</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>
-                      <input class="form-control m-auto" v-model="checked" value="1" style="width: 25px" type="checkbox" id="gridCheck" />
-                    </td>
-                    <td style="width: 20%">
+                    <td style="width: 10%">
                       <img src="/images/product-1.jpg" alt="" class="cart-image" />
                     </td>
-                    <td style="width: 20%">
+                    <td style="width: 25%">
                       <div class="product-title">Buku Startup $100</div>
                       <div class="product-subtitle">Kategori</div>
                     </td>
@@ -255,14 +250,8 @@
                       <div class="product-title">Rp 100.000</div>
                       <div class="product-subtitle">IDR</div>
                     </td>
-                    <td>
-                      <a href="" class="icon-delete"><img src="/images/icon-delete.svg" alt="" /></a>
-                    </td>
                   </tr>
                   <tr>
-                    <td>
-                      <input class="form-control m-auto" v-model="checked" value="2" style="width: 25px" type="checkbox" id="gridCheck" />
-                    </td>
                     <td style="width: 20%">
                       <img src="/images/product-2.jpg" alt="" class="cart-image" />
                     </td>
@@ -282,14 +271,8 @@
                       <div class="product-title">Rp 60.000</div>
                       <div class="product-subtitle">IDR</div>
                     </td>
-                    <td>
-                      <a href="" class="icon-delete"><img src="/images/icon-delete.svg" alt="" /></a>
-                    </td>
                   </tr>
                   <tr>
-                    <td>
-                      <input class="form-control m-auto" v-model="checked" value="3" style="width: 25px" type="checkbox" id="gridCheck" />
-                    </td>
                     <td style="width: 20%">
                       <img src="/images/product-3.jpg" alt="" class="cart-image" />
                     </td>
@@ -309,9 +292,6 @@
                       <div class="product-title">Rp 150.000</div>
                       <div class="product-subtitle">IDR</div>
                     </td>
-                    <td>
-                      <a href="" class="icon-delete"><img src="/images/icon-delete.svg" alt="" /></a>
-                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -322,108 +302,85 @@
               <hr />
             </div>
             <div class="col-12">
-              <h2 class="mb-3">Informasi Belanja</h2>
+              <h2>Shipping Details</h2>
             </div>
           </div>
-          <div class="row" data-aos="fade-up" data-aos-delay="200">
-            <div class="col-6 col-md-4">
-              <div class="payment-title">3 Barang</div>
-              <div class="payment-subtitle mb-3">Jumblah Barang</div>
+          <div class="row mb-2" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="addressOne">Alamat 1</label>
+                <input type="text" name="addressOne" id="addressOne" class="form-control form-store" value="Setra Duta Cemara" />
+              </div>
             </div>
-            <div class="col-6 col-md-4">
-              <div class="payment-title" style="font-weight: 600">Rp. 505.000</div>
-              <div class="payment-subtitle">Total Harga</div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="addressTwo">Alamat 2</label>
+                <input type="text" name="addressTwo" id="addressTwo" class="form-control form-store" value="Blok B2 No. 34" />
+              </div>
             </div>
-            <div class="col-12 col-md-4 mb-2 mt-2">
-              <button href="checkout.html" :disabled="!checked.length" class="btn btn-dark btn-block px-4 py-2">Beli Sekarang ({{ checked.length }})</button>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="province">Provinsi</label>
+                <select name="province" id="province" class="form-control">
+                  <option value="west-java">West Java</option>
+                  <option value="south-java">South Java</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="city">Kota</label>
+                <select name="city" id="city" class="form-control">
+                  <option value="">Jakarta</option>
+                  <option value="">Bandung</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="postal-code">Kode Pos</label>
+                <input type="number" name="postal-code" id="postal-code" class="form-control form-store" value="123999" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="payment">Pembayaran</label>
+                <select name="payment" id="payment" class="form-control">
+                  <option value="">GOPAY</option>
+                  <option value="">DANA</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="mobile">No Hp / WA</label>
+                <input type="tel" name="mobile" id="mobile" class="form-control form-store" value="+628 2020 11111" />
+              </div>
             </div>
           </div>
-          <div class="row" data-aos="fade-up" data-aos-delay="250">
+          <div class="row" data-aos="fade-up" data-aos-delay="150">
             <div class="col-12">
               <hr />
             </div>
-          </div>
-        </div>
-      </section>
-      <section class="products-store" id="products-store" data-aos="fade-up" data-aos-delay="300">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 d-flex align-items-center">
-              <h5>Rekomendasi Untukmu</h5>
+            <div class="col-12">
+              <h2 class="mb-2">Payment Information</h2>
             </div>
           </div>
-          <div class="row">
-            <div class="col-6 col-lg-3">
-              <a href="details.html" class="component-product">
-                <div class="product-thumbnail">
-                  <div class="product-image" style="background-image: url('images/product-1.jpg')"></div>
-                </div>
-                <div class="product-name">Buku Startup $100</div>
-                <div class="product-price">Rp 100.000</div>
-              </a>
+          <div class="row" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-4 col-md-3">
+              <div class="payment-title">Rp. 5.000</div>
+              <div class="payment-subtitle mb-3">Ongkir</div>
             </div>
-            <div class="col-6 col-lg-3">
-              <a href="details.html" class="component-product">
-                <div class="product-thumbnail">
-                  <div class="product-image" style="background-image: url('images/product-2.jpg')"></div>
-                </div>
-                <div class="product-name">Pulpen Pelangi</div>
-                <div class="product-price">Rp 30.000</div>
-              </a>
+            <div class="col-4 col-md-3">
+              <div class="payment-title">Gopay</div>
+              <div class="payment-subtitle">Pembayaran</div>
             </div>
-            <div class="col-6 col-lg-3">
-              <a href="details.html" class="component-product">
-                <div class="product-thumbnail">
-                  <div class="product-image" style="background-image: url('images/product-3.jpg')"></div>
-                </div>
-                <div class="product-name">Penggaris Unique</div>
-                <div class="product-price">Rp 60.000</div>
-              </a>
+            <div class="col-5 col-md-3 mt-2 mt-lg-0">
+              <div class="payment-title" style="font-weight: 600">Rp. 505.000</div>
+              <div class="payment-subtitle">Total</div>
             </div>
-            <div class="col-6 col-lg-3">
-              <a href="details.html" class="component-product">
-                <div class="product-thumbnail">
-                  <div class="product-image" style="background-image: url('images/product-4.jpg')"></div>
-                </div>
-                <div class="product-name">Bubuk Maketti</div>
-                <div class="product-price">Rp 80.000</div>
-              </a>
-            </div>
-            <div class="col-6 col-lg-3">
-              <a href="details.html" class="component-product">
-                <div class="product-thumbnail">
-                  <div class="product-image" style="background-image: url('images/product-5.jpg')"></div>
-                </div>
-                <div class="product-name">Tatakan Gelas</div>
-                <div class="product-price">Rp 50.000</div>
-              </a>
-            </div>
-            <div class="col-6 col-lg-3">
-              <a href="details.html" class="component-product">
-                <div class="product-thumbnail">
-                  <div class="product-image" style="background-image: url('images/product-6.jpg')"></div>
-                </div>
-                <div class="product-name">Stabilo Transparan</div>
-                <div class="product-price">Rp 200.000</div>
-              </a>
-            </div>
-            <div class="col-6 col-lg-3">
-              <a href="details.html" class="component-product">
-                <div class="product-thumbnail">
-                  <div class="product-image" style="background-image: url('images/product-7.jpg')"></div>
-                </div>
-                <div class="product-name">Kopi Cinta</div>
-                <div class="product-price">Rp 120.000</div>
-              </a>
-            </div>
-            <div class="col-6 col-lg-3">
-              <a href="details.html" class="component-product">
-                <div class="product-thumbnail">
-                  <div class="product-image" style="background-image: url('images/product-8.jpg')"></div>
-                </div>
-                <div class="product-name">Monkey Toys</div>
-                <div class="product-price">Rp 300.000</div>
-              </a>
+            <div class="col-12 col-md-3 mt-2">
+              <a href="checkout.html" class="btn btn-dark btn-block px-4 mt-1">Checkout Now</a>
             </div>
           </div>
         </div>
@@ -491,17 +448,6 @@
         },
         data: {
           searchBarInput: '',
-        },
-      });
-
-      var cart = new Vue({
-        el: '#cart',
-        mounted() {
-          AOS.init();
-        },
-        data: {
-          checked: [],
-          total: 0,
         },
       });
     </script>
